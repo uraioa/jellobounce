@@ -28,6 +28,16 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "Borel";
+    src: url("./assets/font/borel/Borel-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "urbanist-variable";
+    src: url("./assets/font/urbanist-variable/Urbanist-VariableFont_wght.ttf");
+}
+
 * {
     box-sizing: border-box;
     margin: 0;

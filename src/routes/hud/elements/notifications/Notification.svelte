@@ -11,6 +11,8 @@
 </div>
 
 <style lang="scss">
+  @import "../../../../colors.scss";
+
   .notification {
     display: grid;
     grid-template-areas:
@@ -18,12 +20,14 @@
             "a c";
     grid-template-columns: max-content 1fr;
     column-gap: 10px;
-    background: rgba(0, 0, 0, 0.68);
-    border-radius: 5px;
-    width: 300px;
+    background: rgba(black, $transparency);
+    border-radius: 12px;
+    min-width: 298px;
     overflow: hidden;
     padding: 10px;
     margin-bottom: 10px;
+    box-shadow: 0px 0px 20px rgba(black, 0.6);
+    border: solid 1px $border-thing;
   }
 
   .icon {
@@ -31,23 +35,23 @@
     width: 40px;
     background-position: center;
     background-repeat: no-repeat;
-    border-radius: 4px;
+    border-radius: 100px;
     grid-area: a;
     transition: background-color 0.2s;
     position: relative;
 
     &.success {
-      background-color: #4dac68;
+      background-color: #4dac6800;
       background-image: url("/img/hud/notification/icon-success.svg");
     }
 
     &.error {
-      background-color: #fc4130;
+      background-color: #fc413000;
       background-image: url("/img/hud/notification/icon-error.svg");
     }
 
     &.info {
-      background-color: #4677ff;
+      background-color: #4677ff00;
       background-image: url("/img/hud/notification/icon-info.svg");
     }
 
@@ -58,7 +62,7 @@
         position: absolute;
         height: 10px;
         width: 10px;
-        border-radius: 5px;
+        border-radius: 100px;
         top: 50%;
         transform: translate(-50%, -50%);
         background: white;
@@ -69,7 +73,7 @@
     }
 
     &.enabled {
-      background-color: #4dac68;
+      background-color: #4dac6800;
 
       &::after {
         left: 62%;
@@ -77,7 +81,7 @@
     }
 
     &.disabled {
-      background-color: #fc4130;
+      background-color: #fc413000;
 
       &::after {
         left: 38%;

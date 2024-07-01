@@ -50,7 +50,37 @@
       ]
     },
     {
-      "name": "TabGui",
+      "name": "ArrayList",
+      "value": [
+        {
+          "name": "Enabled",
+          "value": true
+        },
+        {
+          "name": "Alignment",
+          "value": [
+            {
+              "name": "Horizontal",
+              "value": "Right"
+            },
+            {
+              "name": "HorizontalOffset",
+              "value": 15
+            },
+            {
+              "name": "Vertical",
+              "value": "Top"
+            },
+            {
+              "name": "VerticalOffset",
+              "value": 15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Notifications",
       "value": [
         {
           "name": "Enabled",
@@ -73,67 +103,7 @@
             },
             {
               "name": "VerticalOffset",
-              "value": 90
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "ArrayList",
-      "value": [
-        {
-          "name": "Enabled",
-          "value": true
-        },
-        {
-          "name": "Alignment",
-          "value": [
-            {
-              "name": "Horizontal",
-              "value": "Right"
-            },
-            {
-              "name": "HorizontalOffset",
-              "value": 0
-            },
-            {
-              "name": "Vertical",
-              "value": "Top"
-            },
-            {
-              "name": "VerticalOffset",
-              "value": 0
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Notifications",
-      "value": [
-        {
-          "name": "Enabled",
-          "value": true
-        },
-        {
-          "name": "Alignment",
-          "value": [
-            {
-              "name": "Horizontal",
-              "value": "Right"
-            },
-            {
-              "name": "HorizontalOffset",
-              "value": 15
-            },
-            {
-              "name": "Vertical",
-              "value": "Bottom"
-            },
-            {
-              "name": "VerticalOffset",
-              "value": 5
+              "value": 100
             }
           ]
         }
@@ -144,7 +114,7 @@
       "value": [
         {
           "name": "Enabled",
-          "value": true
+          "value": false
         },
         {
           "name": "Alignment",
@@ -189,11 +159,11 @@
             },
             {
               "name": "Vertical",
-              "value": "Top"
+              "value": "CenterTranslated"
             },
             {
               "name": "VerticalOffset",
-              "value": 550
+              "value": 0
             }
           ]
         }
@@ -204,7 +174,7 @@
       "value": [
         {
           "name": "Enabled",
-          "value": true
+          "value": false
         },
         {
           "name": "Alignment",
@@ -245,19 +215,19 @@
           "value": [
             {
               "name": "Horizontal",
-              "value": "Center"
-            },
-            {
-              "name": "HorizontalOffset",
-              "value": 20
-            },
-            {
-              "name": "Vertical",
               "value": "CenterTranslated"
             },
             {
-              "name": "VerticalOffset",
+              "name": "HorizontalOffset",
               "value": 0
+            },
+            {
+              "name": "Vertical",
+              "value": "Center"
+            },
+            {
+              "name": "VerticalOffset",
+              "value": 200
             }
           ]
         }
@@ -298,14 +268,14 @@
       "value": [
         {
           "name": "Enabled",
-          "value": false
+          "value": true
         },
         {
           "name": "Alignment",
           "value": [
             {
               "name": "Horizontal",
-              "value": "Left"
+              "value": "Right"
             },
             {
               "name": "HorizontalOffset",

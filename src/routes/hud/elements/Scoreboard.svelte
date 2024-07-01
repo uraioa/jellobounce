@@ -38,13 +38,16 @@
     //position: fixed;
     //left: 15px;
     //top: 550px;
-    border-radius: 5px;
+    border-radius: 12px;
     overflow: hidden;
     font-size: 14px;
+    filter: grayscale(1);
+    border: solid 1px $border-thing;
+    box-shadow: 0px 0px 20px rgba(black, 0.6);
   }
 
   .entries {
-    background-color: rgba($scoreboard-base-color, 0.5);
+    background-color: rgba($scoreboard-base-color, $transparency);
     padding: 10px;
   }
 
@@ -56,7 +59,7 @@
 
   .header {
     text-align: center;
-    background-color: rgba($scoreboard-base-color, 0.68);
+    background-color: rgba($scoreboard-base-color, $transparency);
     padding: 7px 10px;
   }
 </style>

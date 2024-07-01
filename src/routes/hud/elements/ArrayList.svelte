@@ -39,7 +39,7 @@
 
 <div class="arraylist">
     {#each enabledModules as { name } (name)}
-        <div class="module" animate:flip={{ duration: 200 }} in:fly={{ x: 50, duration: 200 }}>
+        <div class="module" animate:flip={{ duration: 200 }} in:fly={{ x: 50, duration: 200 }} out:fly={{ x: 50, duration: 200 }}>
             {$spaceSeperatedNames ? convertToSpacedString(name) : name}
         </div>
     {/each}
@@ -55,14 +55,22 @@
     }
 
     .module {
-        background-color: rgba($arraylist-base-color, 0.68);
+        background-color: rgba($arraylist-base-color, $transparency);
         color: $arraylist-text-color;
-        font-size: 14px;
-        border-radius: 4px 0 0 4px;
+        font-size: 17px;
+        font-family: urbanist-variable;
         padding: 5px 8px;
-        border-left: solid 4px $accent-color;
         width: max-content;
         font-weight: 500;
         margin-left: auto;
+        box-shadow: -20px 0px 20px rgba(black, 0.3), 20px 0px 20px rgba(black, 0.3);
+    }
+
+    .module:first-child {
+        box-shadow: 0px -20px 20px rgba(black, 0.25), -20px 0px 20px 0px rgba(black, 0.25), 20px 0px 20px rgba(black, 0.25);
+    }
+
+    .module:last-child {
+        box-shadow: 0px 20px 20px rgba(black, 0.25), -20px 0px 20px rgba(black, 0.25), 20px 0px 20px rgba(black, 0.25);
     }
 </style>

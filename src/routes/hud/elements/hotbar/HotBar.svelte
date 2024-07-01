@@ -66,24 +66,23 @@
 {#if playerData && playerData.gameMode !== "spectator"}
     <div class="hotbar">
         {#if overlayMessage !== null}
-            <div class="overlay-message" out:fade={{duration: 200}}
+            <div class="overlay-message" transition:fade|global={{duration: 200}}
                  style="max-width: {slotsElement?.offsetWidth ?? 0}px">
                 <TextComponent fontSize={14} textComponent={overlayMessage.text}/>
             </div>
         {/if}
         {#if showItemStackName && itemStackName !== null}
-            <div class="item-name" out:fade={{duration: 200}}>
+            <div class="item-name" transition:fade|global={{duration: 200}}>
                 <TextComponent fontSize={14} textComponent={itemStackName}/>
             </div>
         {/if}
         <div class="status">
-
             <div class="pair">
                 {#if playerData.armor > 0}
                     <Status
                             max={20}
                             value={playerData.armor}
-                            color="#49EAD6"
+                            color="#3b3b3b"
                             alignRight={false}
                             icon="shield"
                     />
@@ -95,7 +94,7 @@
                     <Status
                             max={playerData.maxAir}
                             value={playerData.air}
-                            color="#AAC1E3"
+                            color="#3b3b3b"
                             alignRight={true}
                     />
                 {:else}
@@ -109,7 +108,7 @@
                         <Status
                                 max={maxAbsorption}
                                 value={playerData.absorption}
-                                color="#D4AF37"
+                                color="#3b3b3b"
                                 alignRight={false}
                         />
 
@@ -120,14 +119,14 @@
                     <Status
                             max={playerData.maxHealth}
                             value={playerData.health}
-                            color="#FC4130"
+                            color="#2e2e2e"
                             alignRight={false}
                             icon="heart"
                     />
                     <Status
                             max={20}
                             value={playerData.food}
-                            color="#B88458"
+                            color="#2e2e2e"
                             alignRight={true}
                             icon="food"
                     />
@@ -136,12 +135,11 @@
             {#if playerData.experienceLevel > 0}
                 <Status
                         max={100} value={playerData.experienceProgress * 100}
-                        color="#88C657"
+                        color="#2e2e2e"
                         alignRight={false}
                         label={playerData.experienceLevel.toString()}
                 />
             {/if}
-
         </div>
 
         <div class="hotbar-elements">
@@ -160,7 +158,7 @@
         </div>
 
         {#if playerData?.offHandStack.identifier !== "minecraft:air"}
-            <div class="offhand-slot"></div>
+            <div class="offhand-slot" transition:fade|global={{duration: 200}}></div>
         {/if}
     </div>
 {/if}
@@ -179,6 +177,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 25px;
+    border-radius: 12px;
   }
 
   .status {
@@ -190,18 +189,22 @@
   }
 
   .hotbar-elements {
-    background-color: rgba($hotbar-base-color, 0.68);
+    background-color: rgba(black, $transparency);
     position: relative;
-    border-radius: 5px;
+    border-radius: 12px;
     overflow: hidden;
+    box-shadow: 0px 0px 20px rgba(black, 0.6);
+    border: solid 1px $border-thing;
+     
 
     .slider {
-      border: solid 2px $accent-color;
       height: 45px;
       width: 45px;
+      padding-left: 10px;
       position: absolute;
-      border-radius: 5px;
-      /* transition: linear left 0.05s; TODO: Animation is possible but annoying */
+      border-radius: 7px;
+      transition: ease left 0.1s;
+      border-bottom: solid 5px $accent-color;
     }
 
     .slots {
@@ -217,28 +220,28 @@
   .offhand-slot {
     height: 45px;
     width: 45px;
-    border-radius: 5px;
-    background-color: rgba($hotbar-base-color, 0.68);
+    border-radius: 12px;
+    background-color: rgba(black, $transparency);
     position: absolute;
     bottom: 0;
     left: -65px;
+    box-shadow: 0px 0px 20px rgba(black, 0.6);
   }
 
   .item-name {
-    color: $hotbar-text-color;
+    color: white;
     font-size: 14px;
     margin: 0 auto 15px;
     font-weight: 500;
-    background-color: rgba($hotbar-base-color, .68);
-    padding: 5px 8px;
-    border-radius: 5px;
     width: max-content;
+    text-shadow: 0px 0px 15px rgba(black, 0.7);
   }
 
   .overlay-message {
     text-align: center;
-    color: $hotbar-text-color;
+    color: white;
     margin-bottom: 15px;
     overflow: hidden;
+    text-shadow: 0px 0px 15px rgba(black, 0.7);
   }
 </style>

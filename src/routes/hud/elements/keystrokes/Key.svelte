@@ -26,21 +26,28 @@
 
   .key {
     height: 50px;
-    background-color: rgba($keystrokes-base-color, .68);
+    background-color: rgba($keystrokes-base-color, $transparency);
     color: $keystrokes-text-color;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 5px;
-    font-size: 14px;
+    border-radius: 12px;
+    font-size: 17px;
     font-weight: 500;
-    transition: ease box-shadow .2s;
+    transition: ease background-color .3s;
     position: relative;
-    box-shadow: inset 0 0 0 0 $accent-color;
+    background-color: rgba(black, 0.6);
     text-align: center;
+    font-family: Inter;
+    box-shadow: 0px 0px 20px rgba(black, 0.6);
+    border: solid 1px $border-thing;
 
     &.active {
-      box-shadow: inset 0 0 0 25px $accent-color;
+      background-color: rgba($accent-color, 0.9);
+      border-radius: 12px;
+      scale: 95%;
+      align-self: center;
+      font-size: 17px;
     }
   }
 </style>
