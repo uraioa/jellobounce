@@ -235,7 +235,7 @@
     margin: 0 auto 15px;
     font-weight: 500;
     width: max-content;
-    text-shadow: 0px 0px 15px rgba(black, 0.7);
+    text-shadow: 0px 0px 15px rgba(black, 1);
   }
 
   .overlay-message {
@@ -243,6 +243,6 @@
     color: white;
     margin-bottom: 15px;
     overflow: hidden;
-    text-shadow: 0px 0px 15px rgba(black, 0.7);
+    text-shadow: 0px 0px 15px rgba(black, 1);
   }
 </style>

@@ -50,6 +50,7 @@
     background-color: rgba(black, $transparency);
     padding: 5px 8px;
     box-shadow: 0px 0px 20px rgba(black, 0.6);
+    border: solid 1px $border-thing;
 
     .duration {
       color: white;
