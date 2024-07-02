@@ -82,7 +82,7 @@
                     <Status
                             max={20}
                             value={playerData.armor}
-                            color="#3b3b3b"
+                            color="#3b3b3b80"
                             alignRight={false}
                             icon="shield"
                     />
@@ -94,7 +94,7 @@
                     <Status
                             max={playerData.maxAir}
                             value={playerData.air}
-                            color="#3b3b3b"
+                            color="#3b3b3b80"
                             alignRight={true}
                     />
                 {:else}
@@ -108,7 +108,7 @@
                         <Status
                                 max={maxAbsorption}
                                 value={playerData.absorption}
-                                color="#3b3b3b"
+                                color="#3b3b3b80"
                                 alignRight={false}
                         />
 
@@ -119,14 +119,14 @@
                     <Status
                             max={playerData.maxHealth}
                             value={playerData.health}
-                            color="#2e2e2e"
+                            color="#2e2e2e80"
                             alignRight={false}
                             icon="heart"
                     />
                     <Status
                             max={20}
                             value={playerData.food}
-                            color="#2e2e2e"
+                            color="#2e2e2e80"
                             alignRight={true}
                             icon="food"
                     />
@@ -189,11 +189,11 @@
   }
 
   .hotbar-elements {
-    background-color: rgba(black, $transparency);
+    background-color: rgba($background-color, $transparency);
     position: relative;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0px 0px 20px rgba(black, 0.6);
+    box-shadow: 0px 0px 10px rgba(black, 0.4);
     border: solid 1px $border-thing;
      
 
@@ -205,7 +205,7 @@
       border-radius: 12px;
       transition: ease left 0.1s;
       border: solid 1px $accent-color;
-      box-shadow: 0px 0px 20px rgba(black, 0.6);
+      box-shadow: 0px 0px 10px rgba(black, 0.4);
     }
 
     .slots {
@@ -226,7 +226,7 @@
     position: absolute;
     bottom: 0;
     left: -65px;
-    box-shadow: 0px 0px 20px rgba(black, 0.6);
+    box-shadow: 0px 0px 10px rgba(black, 0.4);
   }
 
   .item-name {
@@ -235,14 +235,13 @@
     margin: 0 auto 15px;
     font-weight: 500;
     width: max-content;
-    text-shadow: 0px 0px 15px rgba(black, 1);
+    text-shadow: 0px 0px 10px rgba(black, 1);
   }
 
   .overlay-message {
     text-align: center;
     color: white;
     margin-bottom: 15px;
-    overflow: hidden;
-    text-shadow: 0px 0px 15px rgba(black, 1);
+    text-shadow: 0px 0px 10px rgba(black, 1);
   }
 </style>

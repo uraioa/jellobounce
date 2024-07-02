@@ -36,14 +36,13 @@
     font-weight: 500;
     transition: ease background-color .3s;
     position: relative;
-    background-color: rgba(black, 0.6);
     text-align: center;
     font-family: urbanist-variable;
-    box-shadow: 0px 0px 20px rgba(black, 0.6);
+    box-shadow: 0px 0px 10px rgba(black, 0.4);
     border: solid 1px $border-thing;
 
     &.active {
-      background-color: rgba($accent-color, 0.9);
+      background-color: rgba($accent-color, 0.7);
       border-radius: 12px;
       scale: 95%;
       align-self: center;

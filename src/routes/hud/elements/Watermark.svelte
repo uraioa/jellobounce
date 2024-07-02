@@ -10,7 +10,7 @@
         color: rgba(white, 0.9);
         font-size: 50px;
         z-index: 1;
-        text-shadow: 0px 0px 15px rgba(black, 0.7);
+        text-shadow: 0px 0px 15px rgba(black, 0.5);
     }
 
     .shaderfix {
