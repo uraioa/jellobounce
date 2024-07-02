@@ -63,14 +63,14 @@
         width: max-content;
         font-weight: 500;
         margin-left: auto;
-        box-shadow: -10px 0px 15px rgba(black, 0.4), 10px 0px 18px rgba(black, 0.4);
+        box-shadow: -10px 0px 15px rgba(black, 0.34), 10px 0px 18px rgba(black, 0.34);
     }
 
     .module:first-child {
-        box-shadow: 0px -10px 18px rgba(black, 0.25), -10px 0px 18px 0px rgba(black, 0.25), 10px 0px 18px rgba(black, 0.25);
+        box-shadow: 0px -10px 18px rgba(black, 0.22), -10px 0px 18px 0px rgba(black, 0.22), 10px 0px 18px rgba(black, 0.22);
     }
 
     .module:last-child {
-        box-shadow: 0px 10px 18px rgba(black, 0.25), -10px 0px 18px rgba(black, 0.25), 10px 0px 18px rgba(black, 0.25);
+        box-shadow: 0px 10px 18px rgba(black, 0.22), -10px 0px 18px rgba(black, 0.22), 10px 0px 18px rgba(black, 0.22);
     }
 </style>
