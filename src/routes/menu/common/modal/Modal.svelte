@@ -38,12 +38,13 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba($menu-base-color, 0.5);
+    background-color: rgba($background-color, $transparency);
     z-index: 99999;
+     
   }
 
   .modal {
-    background-color: rgba($menu-base-color, 0.7);
+    background-color: rgba($background-color, $transparency);
     min-width: 500px;
     position: fixed;
     left: 50%;
@@ -52,11 +53,12 @@
     padding: 40px;
     display: flex;
     flex-direction: column;
-    border-radius: 5px;
+    border-radius: 12px;
+     
   }
 
   .title {
-    color: $menu-text-color;
+    color: $text-color;
     font-size: 34px;
     position: relative;
     width: max-content;
@@ -90,7 +92,7 @@
     align-items: center;
     justify-content: center;
     background-color: transparent;
-    border: solid 2px $menu-text-color;
+    border: solid 2px $text-color;
     border-radius: 50%;
     cursor: pointer;
     top: 20px;
@@ -99,7 +101,7 @@
     transition: ease background-color .2s;
 
     &:hover {
-      background-color: rgba($menu-text-color, 0.1);
+      background-color: rgba($text-color, 0.1);
     }
   }
 
@@ -115,7 +117,7 @@
     }
   }
 
-  @media screen and (max-height: 1100px) {
+  @media screen and (max-height: 1000px) {
     .modal {
       zoom: 0.8;
     }

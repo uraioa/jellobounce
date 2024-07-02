@@ -202,9 +202,10 @@
       width: 45px;
       padding-left: 10px;
       position: absolute;
-      border-radius: 7px;
+      border-radius: 12px;
       transition: ease left 0.1s;
-      border-bottom: solid 5px $accent-color;
+      border: solid 1px $accent-color;
+      box-shadow: 0px 0px 20px rgba(black, 0.6);
     }
 
     .slots {

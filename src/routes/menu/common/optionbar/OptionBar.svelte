@@ -10,12 +10,13 @@
     @import "../../../../colors";
 
     .option-bar {
-      background-color: rgba($menu-base-color, 0.68);
+      background-color: rgba($background-color, 0.68);
       padding: 15px 30px;
       display: flex;
-      border-radius: 5px;
+      border-radius: 12px;
       align-items: center;
       column-gap: 30px;
       margin-bottom: 25px;
+       
     }
 </style>

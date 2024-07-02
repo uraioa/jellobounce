@@ -36,27 +36,27 @@
   @import "../../../../colors.scss";
 
   .main-button {
-    background-color: rgba($menu-base-color, 0.68);
-    width: 590px;
-    padding: 25px 35px;
+    background-color: rgba($background-color, $transparency);
+    width: 475px;
+    padding: 15px 15px;
     display: grid;
     grid-template-columns: max-content 1fr max-content;
     align-items: center;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 12px;
     column-gap: 25px;
-
-    background: linear-gradient(to left, rgba($menu-base-color, .68) 50%, $accent-color 50%);
+    background: linear-gradient(to left, rgba($background-color, 0.4) 50%, $accent-color, 1);
     background-size: 200% 100%;
     background-position: right bottom;
     will-change: background-position;
     transition: background-position .2s ease-out;
+     
 
     &:hover {
       background-position: left bottom;
 
       .icon {
-        background-color: $menu-text-color;
+        background-color: $text-color;
       }
     }
   }
@@ -79,7 +79,7 @@
 
   .title {
     font-size: 26px;
-    color: $menu-text-color;
+    color: $text-color;
     font-weight: 600;
   }
 </style>

@@ -55,7 +55,7 @@
     }
   }
 
-  @media screen and (max-height: 1100px) {
+  @media screen and (max-height: 1000px) {
     .menu {
       zoom: 0.8;
       height: 125vh;

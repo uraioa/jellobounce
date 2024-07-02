@@ -26,8 +26,8 @@
 
   .key {
     height: 50px;
-    background-color: rgba($keystrokes-base-color, $transparency);
-    color: $keystrokes-text-color;
+    background-color: rgba($background-color, $transparency);
+    color: $text-color;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -38,7 +38,7 @@
     position: relative;
     background-color: rgba(black, 0.6);
     text-align: center;
-    font-family: Inter;
+    font-family: urbanist-variable;
     box-shadow: 0px 0px 20px rgba(black, 0.6);
     border: solid 1px $border-thing;
 

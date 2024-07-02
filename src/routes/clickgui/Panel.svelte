@@ -206,7 +206,7 @@
     width: 250px;
     position: absolute;
     overflow: hidden;
-    box-shadow: 0 0 10px rgba($clickgui-base-color, 0.5);
+    box-shadow: 0 0 10px rgba($background-color, 0.5);
     will-change: transform;
   }
 
@@ -215,14 +215,14 @@
     grid-template-columns: max-content 1fr max-content;
     align-items: center;
     column-gap: 12px;
-    background-color: rgba($clickgui-base-color, 0.9);
+    background-color: rgba($background-color, 0.9);
     border-bottom: solid 2px $accent-color;
     padding: 10px 15px;
     cursor: grab;
 
     .category {
       font-size: 14px;
-      color: $clickgui-text-color;
+      color: $text-color;
       font-weight: 500;
     }
   }
@@ -231,7 +231,7 @@
     max-height: 545px;
     overflow-y: auto;
     overflow-x: hidden;
-    background-color: rgba($clickgui-base-color, 0.8);
+    background-color: rgba($background-color, 0.8);
   }
 
   .modules::-webkit-scrollbar {

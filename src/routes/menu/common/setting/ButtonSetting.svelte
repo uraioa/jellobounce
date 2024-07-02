@@ -28,10 +28,10 @@
   .button-setting {
     border: none;
     background-color: $accent-color;
-    color: $menu-text-color;
+    color: $text-color;
     font-family: "Inter", sans-serif;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 12px;
     font-size: 20px;
     transition: ease background-color .2s, ease opacity .2s;
 
@@ -40,15 +40,15 @@
     }
 
     &.secondary {
-      background-color: rgba($menu-base-color, .36);
+      background-color: rgba($background-color, 0);
     }
 
     &:not([disabled]):hover {
-      background-color: darken(desaturate($accent-color, 30%), 10%);
+      background-color: darken(desaturate($accent-color, 0%), 0%);
       cursor: pointer;
 
       &.secondary {
-        background-color: darken(desaturate($menu-base-color, 30%), 10%);
+        background-color: darken(desaturate($background-color, 0%), 0%);
       }
     }
 

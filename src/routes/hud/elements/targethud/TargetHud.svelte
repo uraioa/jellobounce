@@ -56,7 +56,7 @@
         //top: 50%;
         //left: calc(50% + 20px);
         //transform: translateY(-50%); // overwrites the component transform
-        width: 270px;
+        min-width: 250px;
         background-color: rgba(black, $transparency);
         border-radius: 12px;
         overflow: hidden;
@@ -76,12 +76,12 @@
     .name {
         grid-area: a;
         color: white;
-        font-weight: medium;
+        font-weight: 500;
         align-self: flex-start;
         padding-left: 56px;
-        padding-top: 2px;
-        font-size: 22px;
-        padding-right: 7px;
+        padding-top: 3px;
+        font-size: 20px;
+        padding-right: 6px;
     }
 
     .health-stats {
@@ -93,7 +93,7 @@
 
         .stat {
             .value {
-                color: $targethud-text-dimmed-color;
+                color: $text-dimmed-color;
                 font-size: 14px;
                 min-width: 18px;
                 display:inline-block;

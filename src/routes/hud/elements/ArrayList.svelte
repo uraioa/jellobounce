@@ -15,8 +15,8 @@
             .filter((m) => m.enabled && !m.hidden)
             .sort(
                 (a, b) =>
-                    getTextWidth($spaceSeperatedNames ? convertToSpacedString(b.name) : b.name, "500 14px Inter") -
-                    getTextWidth($spaceSeperatedNames ? convertToSpacedString(a.name) : a.name, "500 14px Inter"),
+                    getTextWidth($spaceSeperatedNames ? convertToSpacedString(b.name) : b.name, "500 14px urbanist-variable") -
+                    getTextWidth($spaceSeperatedNames ? convertToSpacedString(a.name) : a.name, "500 14px urbanist-variable"),
             );
     }
 
@@ -55,22 +55,22 @@
     }
 
     .module {
-        background-color: rgba($arraylist-base-color, $transparency);
-        color: $arraylist-text-color;
-        font-size: 17px;
+        background-color: rgba($background-color, $transparency);
+        color: $text-color;
+        font-size: 16px;
         font-family: urbanist-variable;
         padding: 5px 8px;
         width: max-content;
         font-weight: 500;
         margin-left: auto;
-        box-shadow: -20px 0px 20px rgba(black, 0.3), 20px 0px 20px rgba(black, 0.3);
+        box-shadow: -10px 0px 15px rgba(black, 0.4), 10px 0px 18px rgba(black, 0.4);
     }
 
     .module:first-child {
-        box-shadow: 0px -20px 20px rgba(black, 0.25), -20px 0px 20px 0px rgba(black, 0.25), 20px 0px 20px rgba(black, 0.25);
+        box-shadow: 0px -10px 18px rgba(black, 0.25), -10px 0px 18px 0px rgba(black, 0.25), 10px 0px 18px rgba(black, 0.25);
     }
 
     .module:last-child {
-        box-shadow: 0px 20px 20px rgba(black, 0.25), -20px 0px 20px rgba(black, 0.25), 20px 0px 20px rgba(black, 0.25);
+        box-shadow: 0px 10px 18px rgba(black, 0.25), -10px 0px 18px rgba(black, 0.25), 10px 0px 18px rgba(black, 0.25);
     }
 </style>

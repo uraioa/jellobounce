@@ -58,8 +58,6 @@
 
                 <MainButton title="Multiplayer" icon="multiplayer" let:parentHovered
                             on:click={() => openScreen("multiplayer")} index={1}>
-                    <ChildButton title="Realms" icon="realms" {parentHovered}
-                                 on:click={() => openScreen("multiplayer_realms")}/>
                 </MainButton>
                 <MainButton title="LiquidBounce" icon="liquidbounce" on:click={toggleButtons} index={2}/>
                 <MainButton title="Options" icon="options" on:click={() => openScreen("options")} index={3}/>

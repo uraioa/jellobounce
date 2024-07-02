@@ -31,7 +31,7 @@
     <div class="username">{username}</div>
     <div class="account-type">
         {#if premium}
-            <span class="premium">Premium</span>
+            <span class="premium">Online</span>
         {:else}
             <span class="offline">Offline</span>
         {/if}
@@ -47,10 +47,10 @@
   @import "../../../../colors";
 
   .account {
-    background-color: rgba($hotbar-base-color, 0.68);
-    width: 488px;
-    padding: 15px 18px;
-    border-radius: 5px;
+    background-color: rgba($background-color, $transparency);
+    padding: 15px 15px;
+    padding-right: 20px;
+    border-radius: 12px;
     align-items: center;
     display: grid;
     grid-template-areas:
@@ -69,7 +69,7 @@
 
   .username {
     font-weight: 600;
-    color: $menu-text-color;
+    color: $text-color;
     font-size: 20px;
     grid-area: b;
     align-self: flex-end;
@@ -86,7 +86,7 @@
     }
 
     .offline {
-      color: $menu-text-dimmed-color;
+      color: $text-dimmed-color;
     }
   }
 
@@ -97,5 +97,6 @@
     position: relative;
     height: max-content;
     cursor: pointer;
+    padding-left: 20px;
   }
 </style>
