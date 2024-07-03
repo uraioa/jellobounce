@@ -82,7 +82,7 @@
                     <Status
                             max={20}
                             value={playerData.armor}
-                            color="#3b3b3b80"
+                            color="#3b3b3b99"
                             alignRight={false}
                             icon="shield"
                     />
@@ -94,7 +94,7 @@
                     <Status
                             max={playerData.maxAir}
                             value={playerData.air}
-                            color="#3b3b3b80"
+                            color="#3b3b3b9o9"
                             alignRight={true}
                     />
                 {:else}
@@ -108,7 +108,7 @@
                         <Status
                                 max={maxAbsorption}
                                 value={playerData.absorption}
-                                color="#3b3b3b80"
+                                color="#3b3b3b99"
                                 alignRight={false}
                         />
 
@@ -119,14 +119,14 @@
                     <Status
                             max={playerData.maxHealth}
                             value={playerData.health}
-                            color="#2e2e2e80"
+                            color="#2e2e2e99"
                             alignRight={false}
                             icon="heart"
                     />
                     <Status
                             max={20}
                             value={playerData.food}
-                            color="#2e2e2e80"
+                            color="#2e2e2e99"
                             alignRight={true}
                             icon="food"
                     />
