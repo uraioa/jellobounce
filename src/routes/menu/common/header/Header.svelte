@@ -6,7 +6,7 @@
 <div class="header">
     <img class="logo" src="img/lb-logo.svg" alt="logo">
 
-    <Notifications />
+    <Notifications/>
 
     <Account/>
 </div>

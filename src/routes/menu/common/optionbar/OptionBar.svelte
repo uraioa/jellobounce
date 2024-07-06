@@ -1,8 +1,8 @@
 <script lang="ts">
-    import {fly} from "svelte/transition";
+    import {fade} from "svelte/transition";
 </script>
 
-<div class="option-bar" transition:fly|global={{duration: 700, x: 1000}}>
+<div class="option-bar" transition:fade|global={{duration: 650}}>
     <slot />
 </div>
 

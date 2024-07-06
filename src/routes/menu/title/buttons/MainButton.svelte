@@ -1,5 +1,5 @@
 <script lang="ts">
-    import {fade, fly} from "svelte/transition";
+    import {fade} from "svelte/transition";
     import {createEventDispatcher} from "svelte";
     import {backIn, backOut} from "svelte/easing";
 
@@ -15,8 +15,8 @@
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <div class="main-button" on:mouseenter={() => hovered = true} on:mouseleave={() => hovered = false}
-     on:click={() => dispatch("click")} out:fly|global={{duration: 400, x: -500, delay: index * 100, easing: backIn}}
-     in:fly|global={{duration: 400, x: -500, delay: index * 100, easing: backOut}}>
+     on:click={() => dispatch("click")} out:fade|global={{duration: 350, delay: index * 100, easing: backIn}}
+     in:fade|global={{duration: 350, delay: index * 100, easing: backOut}}>
     <div class="icon">
         {#if !hovered}
             <img transition:fade={{duration: 200}} src="img/menu/icon-{icon}.svg" alt={icon}>
@@ -36,24 +36,23 @@
   @import "../../../../colors.scss";
 
   .main-button {
-    background-color: rgba($background-color, $transparency);
-    width: 475px;
-    padding: 15px 15px;
+    padding: 15px;
+    width: 500px;
+    position: relative;
     display: grid;
     grid-template-columns: max-content 1fr max-content;
     align-items: center;
     cursor: pointer;
-    border-radius: 12px;
-    column-gap: 25px;
-    background: linear-gradient(to left, rgba($background-color, 0.4) 50%, $accent-color, 1);
-    background-size: 200% 100%;
-    background-position: right bottom;
     will-change: background-position;
-    transition: background-position .2s ease-out;
+    scale: 90%;
+    background-color: rgba($background-color, $transparency);
+    margin: -10px;
+    border-radius: 12px;
+    background-size: 200% 100%;
+    column-gap: 15px;
      
 
     &:hover {
-      background-position: left bottom;
 
       .icon {
         background-color: $text-color;

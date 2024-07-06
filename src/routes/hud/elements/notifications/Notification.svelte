@@ -26,7 +26,7 @@
     overflow: hidden;
     padding: 10px;
     margin-bottom: 10px;
-    box-shadow: 0px 0px 10px rgba(black, 0.4);
+    box-shadow: 0px 0px 10px rgba(black, 0.5);
     border: solid 1px $border-thing;
   }
 
@@ -51,7 +51,7 @@
     }
 
     &.info {
-      background-color: #4677ff00;
+      background-color: #2e2e2e00;
       background-image: url("/img/hud/notification/icon-info.svg");
     }
 

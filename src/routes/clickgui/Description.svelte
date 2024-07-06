@@ -1,5 +1,5 @@
 <script lang="ts">
-    import {fly} from "svelte/transition";
+    import {fade} from "svelte/transition";
     import {description, type TDescription} from "./clickgui_store";
 
     let data: TDescription | null = null;
@@ -11,7 +11,7 @@
 
 {#key data}
     {#if data !== null}
-        <div transition:fly|global={{duration: 200, x: -15}} class="description-wrapper"
+        <div transition:fade|global={{duration: 150}} class="description-wrapper"
              style="top: {data.y}px; left: {data.x + 20}px;">
             <div class="description">
                 <div class="text">{data.description}</div>
@@ -31,9 +31,9 @@
 
   .description {
     position: relative;
-    border-radius: 5px;
-    background-color: rgba($background-color, .9);
-    filter: drop-shadow(0 0 10px rgba($background-color, 0.5));
+    border-radius: 6px;
+    background-color: rgba($background-color, 0.55);
+    filter: drop-shadow(0 0 10px rgba($background-color, 0.4));
 
     &::before {
       content: "";
@@ -43,7 +43,7 @@
       height: 0;
       border-top: 8px solid transparent;
       border-bottom: 8px solid transparent;
-      border-right: 8px solid rgba($background-color, .9);
+      border-right: 8px solid rgba($background-color, 0.55);
       left: -8px;
       top: 50%;
       transform: translateY(-50%);

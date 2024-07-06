@@ -4,7 +4,7 @@
     import {listen} from "../../integration/ws";
     import Module from "./Module.svelte";
     import type {ToggleModuleEvent} from "../../integration/events";
-    import {fly} from "svelte/transition";
+    import {fade} from "svelte/transition";
     import {quintOut} from "svelte/easing";
     import {highlightModuleName, maxPanelZIndex} from "./clickgui_store";
     import {setItem} from "../../integration/persistent_storage";
@@ -170,8 +170,8 @@
         class="panel"
         style="left: {panelConfig.left}px; top: {panelConfig.top}px; z-index: {panelConfig.zIndex};"
         bind:this={panelElement}
-        in:fly|global={{y: -30, duration: 200, easing: quintOut}}
-        out:fly|global={{y: -30, duration: 200, easing: quintOut}}
+        in:fade|global={{duration: 150, easing: quintOut}}
+        out:fade|global={{duration: 150, easing: quintOut}}
 >
     <!-- svelte-ignore a11y-no-static-element-interactions -->
     <div
@@ -202,12 +202,13 @@
   @import "../../colors.scss";
 
   .panel {
-    border-radius: 5px;
-    width: 250px;
+    border-radius: 12px;
+    width: 230px;
     position: absolute;
     overflow: hidden;
-    box-shadow: 0 0 10px rgba($background-color, 0.5);
+    box-shadow: 0 0 10px rgba($background-color, 0.4);
     will-change: transform;
+    box-shadow: inset 0 125px 100px -100px rgba(black, 0.8), 0px 0px 10px rgba(black, 0.5);
   }
 
   .title {
@@ -215,10 +216,10 @@
     grid-template-columns: max-content 1fr max-content;
     align-items: center;
     column-gap: 12px;
-    background-color: rgba($background-color, 0.9);
-    border-bottom: solid 2px $accent-color;
-    padding: 10px 15px;
+    background-color: rgba($background-color, 0.7);
+    padding: 10px;
     cursor: grab;
+    text-align: center;
 
     .category {
       font-size: 14px;
@@ -231,7 +232,7 @@
     max-height: 545px;
     overflow-y: auto;
     overflow-x: hidden;
-    background-color: rgba($background-color, 0.8);
+    background-color: rgba($background-color, 0.7);
   }
 
   .modules::-webkit-scrollbar {

@@ -49,8 +49,9 @@
     text-align: left;
     background-color: rgba(black, $transparency);
     padding: 5px 8px;
-    box-shadow: 0px 0px 10px rgba(black, 0.4);
-    border: solid 1px $border-thing;
+    box-shadow: 0px 0px 10px rgba(black, 0.5);
+    border-left: solid 1px $border-thing;
+    border-right: solid 1px $border-thing;
 
     .duration {
       color: white;
@@ -60,10 +61,12 @@
   .effect:first-child {
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
+    border-bottom: solid 1px $border-thing;
   }
 
   .effect:last-child {
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
+    border-top: solid 1px $border-thing;
   }
 </style>

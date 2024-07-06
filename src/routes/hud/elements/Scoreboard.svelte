@@ -41,8 +41,8 @@
     border-radius: 12px;
     overflow: hidden;
     font-size: 14px;
+    box-shadow: 0px 0px 10px rgba(black, 0.5);
     border: solid 1px $border-thing;
-    box-shadow: 0px 0px 10px rgba(black, 0.4);
   }
 
   .entries {

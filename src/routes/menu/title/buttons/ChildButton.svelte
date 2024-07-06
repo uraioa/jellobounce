@@ -53,7 +53,6 @@
       font-weight: 600;
       font-size: 16px;
       transition: ease color 0.2s;
-      margin-left: 10px;
     }
 
     .icon { /* necessary because svelte's transition system sucks */

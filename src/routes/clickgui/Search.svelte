@@ -166,12 +166,13 @@
     left: 50%;
     top: 50px;
     transform: translateX(-50%);
-    background-color: rgba($background-color, 0.9);
+    background-color: rgba($background-color, 0.7);
     width: 600px;
-    border-radius: 30px;
+    border-radius: 50px;
     overflow: hidden;
     transition: ease border-radius 0.2s;
     box-shadow: 0 0 10px rgba($background-color, 0.5);
+    border: solid 1px $border-thing;
 
     &.has-results {
       border-radius: 10px;

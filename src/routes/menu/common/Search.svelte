@@ -21,7 +21,7 @@
     font-family: "Inter", sans-serif;
     font-size: 20px;
     border-radius: 12px;
-    border-bottom: solid 4px $accent-color;
+    border-bottom: solid 2px $accent-color;
     background-image: url("/img/menu/icon-search.svg");
     background-repeat: no-repeat;
     background-position: 20px center;

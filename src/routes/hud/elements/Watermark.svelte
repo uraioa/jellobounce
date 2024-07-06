@@ -10,7 +10,7 @@
         color: rgba(white, 0.9);
         font-size: 50px;
         z-index: 1;
-        text-shadow: 0px 0px 15px rgba(black, 0.5);
+        text-shadow: 0px 0px 10px rgba(black, 0.3);
     }
 
     .shaderfix {
@@ -18,9 +18,8 @@
         left: -15px;
         position: absolute;
         background-color: rgba(black, 0.1);
-        width: 1920px;
-        height: 1080px;
+        width: 7050px;
+        height: 4050px;
         z-index: -2;
-        border-radius: 12px;
     }
 </style>

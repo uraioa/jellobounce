@@ -1,9 +1,9 @@
 <script lang="ts">
-    import {fly} from "svelte/transition";
+    import {fade} from "svelte/transition";
     import {afterUpdate} from "svelte";
 
     export let text: string;
-    export let color = "#4677ff";
+    export let color = "#2e2e2e";
 
     let element: HTMLElement;
     let shown = false;
@@ -21,7 +21,7 @@
 
 <div bind:this={element}>
     {#if shown}
-        <div transition:fly="{{ y: -10, duration: 200 }}" class="tooltip" style="background-color: {color};">{text}</div>
+        <div transition:fade="{{duration: 150}}" class="tooltip" style="background-color: {color};">{text}</div>
     {/if}
 </div>
 

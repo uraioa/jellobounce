@@ -94,7 +94,7 @@
                     <Status
                             max={playerData.maxAir}
                             value={playerData.air}
-                            color="#3b3b3b9o9"
+                            color="#3b3b3b99"
                             alignRight={true}
                     />
                 {:else}
@@ -135,7 +135,7 @@
             {#if playerData.experienceLevel > 0}
                 <Status
                         max={100} value={playerData.experienceProgress * 100}
-                        color="#2e2e2e"
+                        color="#2e2e2e99"
                         alignRight={false}
                         label={playerData.experienceLevel.toString()}
                 />
@@ -193,9 +193,8 @@
     position: relative;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0px 0px 10px rgba(black, 0.4);
+    box-shadow: 0px 0px 10px rgba(black, 0.5);
     border: solid 1px $border-thing;
-     
 
     .slider {
       height: 45px;
@@ -205,7 +204,7 @@
       border-radius: 12px;
       transition: ease left 0.1s;
       border: solid 1px $accent-color;
-      box-shadow: 0px 0px 10px rgba(black, 0.4);
+      box-shadow: 0px 0px 10px rgba(black, 0.5);
     }
 
     .slots {
@@ -226,7 +225,7 @@
     position: absolute;
     bottom: 0;
     left: -65px;
-    box-shadow: 0px 0px 10px rgba(black, 0.4);
+    box-shadow: 0px 0px 10px rgba(black, 0.5);
   }
 
   .item-name {

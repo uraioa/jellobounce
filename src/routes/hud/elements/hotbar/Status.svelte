@@ -46,7 +46,7 @@
   position: relative;
   border-radius: 12px;
   background-color: rgba(black, $transparency);
-  box-shadow: 0px 0px 10px rgba(black, 0.4);
+  box-shadow: 0px 0px 10px rgba(black, 0.5);
   border: solid 1px $border-thing;
 
   &.align-right {

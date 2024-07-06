@@ -61,7 +61,7 @@
         border-radius: 12px;
         overflow: hidden;
         height: 66px;
-        box-shadow: 0px 0px 10px rgba(black, 0.4);
+        box-shadow: 0px 0px 10px rgba(black, 0.5);
         border: solid 1px $border-thing;
     }
 

@@ -121,8 +121,7 @@
       cursor: pointer;
       transition: ease background-color 0.2s,
       ease color 0.2s;
-
-      color: $text-dimmed-color;
+      color: gray;
       text-align: center;
       font-size: 12px;
       font-weight: 500;
@@ -140,18 +139,18 @@
       }
 
       &:hover {
-        background-color: rgba($background-color, 0.85);
-        color: $text-color;
+        background-color: rgba($background-color, 0.2);
+        color: gray;
       }
 
       &.enabled {
-        color: $accent-color;
+        color: white;
       }
     }
 
     .settings {
       background-color: rgba($background-color, 0.5);
-      border-left: solid 4px $accent-color;
+      border-left: solid 1px $accent-color;
       padding: 0 11px 0 7px;
     }
 
