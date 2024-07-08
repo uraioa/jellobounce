@@ -3,6 +3,7 @@
     import type {PlayerData, Scoreboard} from "../../../integration/types";
     import TextComponent from "../../menu/common/TextComponent.svelte";
     import type {ClientPlayerDataEvent} from "../../../integration/events";
+    import {fade} from "svelte/transition";
 
     let scoreboard: Scoreboard | null = null;
 
@@ -13,7 +14,7 @@
 </script>
 
 {#if scoreboard}
-    <div class="scoreboard">
+    <div class="scoreboard" transition:fade|global={{duration: 500}}>
         {#if scoreboard.header}
             <div class="header">
                 <TextComponent fontSize={14} allowPreformatting={true} textComponent={scoreboard.header}/>

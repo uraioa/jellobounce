@@ -1,4 +1,8 @@
-<div class="watermark">jello</div>
+<script lang="ts">
+    import {fade} from "svelte/transition"
+</script>
+
+<div class="watermark" transition:fade|global={{duration: 500}}>jello</div>
 <div class="shaderfix"></div>
 
 <style lang="scss">

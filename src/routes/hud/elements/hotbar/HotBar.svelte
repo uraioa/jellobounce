@@ -77,7 +77,7 @@
             </div>
         {/if}
         <div class="status">
-            <div class="pair">
+            <div class="pair" transition:fade|global={{duration: 500}}>
                 {#if playerData.armor > 0}
                     <Status
                             max={20}
@@ -104,7 +104,7 @@
 
             {#if playerData.gameMode !== "creative"}
                 {#if playerData.absorption > 0}
-                    <div class="pair">
+                    <div class="pair" transition:fade|global={{duration: 500}}>
                         <Status
                                 max={maxAbsorption}
                                 value={playerData.absorption}
@@ -115,7 +115,7 @@
                         <div></div>
                     </div>
                 {/if}
-                <div class="pair">
+                <div class="pair" transition:fade|global={{duration: 500}}>
                     <Status
                             max={playerData.maxHealth}
                             value={playerData.health}
@@ -142,7 +142,7 @@
             {/if}
         </div>
 
-        <div class="hotbar-elements">
+        <div class="hotbar-elements" transition:fade|global={{duration: 500}}>
             <div class="slider" style="left: {currentSlot * 45}px"></div>
             <div class="slots" bind:this={slotsElement}>
                 <div class="slot"></div>
