@@ -220,6 +220,7 @@
     padding: 10px;
     cursor: grab;
     text-align: center;
+    text-shadow: 0px 0px 20px rgba(150,150,150);
 
     .category {
       font-size: 14px;
@@ -245,14 +246,14 @@
     cursor: pointer;
 
     .icon {
-      height: 12px;
-      width: 12px;
+      height: 0px;
+      width: 15.5px;
       position: relative;
 
       &::before {
         content: "";
         position: absolute;
-        background-color: white;
+        background-color: none;
         transition: transform 0.4s ease-out;
         top: 0;
         left: 50%;
@@ -264,7 +265,7 @@
       &::after {
         content: "";
         position: absolute;
-        background-color: white;
+        background-color: none;
         transition: transform 0.4s ease-out;
         top: 50%;
         left: 0;

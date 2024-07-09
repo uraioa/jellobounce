@@ -110,7 +110,7 @@ float demos_redlandscape_ray_march(vec3 ro, vec3 rd) {
 }
 void main(void) {
   vec2 uv = (gl_FragCoord.xy / resolution);
-  vec2 coord = ((2.0 * (gl_FragCoord.xy - (resolution * 0.5))) / resolution.y);
+  vec2 coord = ((2.0 * (gl_FragCoord.xy - (resolution * 0.5))) / resolution.y * 0.751);
   float z = (time * 0.20);
   vec2 sc = sincos((time * 0.5));
   float y = 0.0;
@@ -158,8 +158,7 @@ void main(void) {
   col = colorgrade_saturate(col, 0.7);
   col = colorgrade_vignette(col, uv, 0.25, 0.7);
   col = colorgrade_dither(col, gl_FragCoord.xy, 0.01);
-
-  // Convert color to grayscale
+	
   float gray = dot(col, vec3(0.299, 0.587, 0.114));
   col = vec3(gray, gray, gray);
 

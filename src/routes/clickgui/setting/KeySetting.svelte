@@ -70,7 +70,7 @@
                 <span>{printableKeyName}</span>
             {/if}
         {:else}
-            <span>Press any key</span>
+            <span>Listening...</span>
         {/if}
     </button>
 </div>
@@ -85,7 +85,7 @@
   .change-bind {
     background-color: transparent;
     border: solid 2px $accent-color;
-    border-radius: 3px;
+    border-radius: 6px;
     cursor: pointer;
     padding: 5px;
     font-weight: 500;

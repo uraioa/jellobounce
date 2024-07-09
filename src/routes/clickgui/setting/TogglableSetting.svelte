@@ -5,7 +5,6 @@
         TogglableSetting,
         BooleanSetting as TBooleanSetting,
     } from "../../../integration/types";
-    import ExpandArrow from "./common/ExpandArrow.svelte";
     import GenericSetting from "./common/GenericSetting.svelte";
     import Switch from "./common/Switch.svelte";
     import { setItem } from "../../../integration/persistent_storage";
@@ -48,7 +47,6 @@
                 bind:value={enabledSetting.value}
                 on:change={handleChange}
             />
-            <ExpandArrow bind:expanded on:click={() => skipAnimationDelay = true} />
         </div>
     {:else}
         <div class="head" class:expanded>

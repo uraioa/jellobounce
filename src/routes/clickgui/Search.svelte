@@ -90,11 +90,11 @@
             return;
         }
 
-        searchInputElement.focus();
+        //searchInputElement.focus();
     }
 
     onMount(() => {
-        searchInputElement.focus();
+        //searchInputElement.focus();
     });
 
     listen("toggleModule", (e: ToggleModuleEvent) => {

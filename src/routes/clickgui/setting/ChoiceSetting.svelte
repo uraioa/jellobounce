@@ -2,7 +2,6 @@
     import {createEventDispatcher} from "svelte";
     import type {ChoiceSetting, ModuleSetting,} from "../../../integration/types";
     import Dropdown from "./common/Dropdown.svelte";
-    import ExpandArrow from "./common/ExpandArrow.svelte";
     import GenericSetting from "./common/GenericSetting.svelte";
     import { setItem } from "../../../integration/persistent_storage";
     import {convertToSpacedString, spaceSeperatedNames} from "../../../theme/theme_config";
@@ -47,7 +46,6 @@
                 name={$spaceSeperatedNames ? convertToSpacedString(cSetting.name) : cSetting.name}
                 on:change={handleChange}
             />
-            <ExpandArrow bind:expanded on:click={() => skipAnimationDelay = true} />
         </div>
     {:else}
         <div class="head">

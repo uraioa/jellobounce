@@ -25,7 +25,7 @@
 
   .description-wrapper {
     position: fixed;
-    z-index: 999999999999;
+    z-index: 999999999999; //silly
     transform: translateY(-50%);
   }
 
