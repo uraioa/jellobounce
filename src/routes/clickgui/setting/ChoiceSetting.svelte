@@ -3,8 +3,9 @@
     import type {ChoiceSetting, ModuleSetting,} from "../../../integration/types";
     import Dropdown from "./common/Dropdown.svelte";
     import GenericSetting from "./common/GenericSetting.svelte";
-    import { setItem } from "../../../integration/persistent_storage";
+    import {setItem} from "../../../integration/persistent_storage";
     import {convertToSpacedString, spaceSeperatedNames} from "../../../theme/theme_config";
+    import ExpandArrow from "./common/ExpandArrow.svelte";
 
     export let setting: ModuleSetting;
     export let path: string;
@@ -46,6 +47,7 @@
                 name={$spaceSeperatedNames ? convertToSpacedString(cSetting.name) : cSetting.name}
                 on:change={handleChange}
             />
+            <ExpandArrow bind:expanded on:click={() => skipAnimationDelay = true} />
         </div>
     {:else}
         <div class="head">
