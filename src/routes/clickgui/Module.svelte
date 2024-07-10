@@ -94,7 +94,7 @@
             bind:this={moduleNameElement}
             class:enabled
             class:highlight={name === $highlightModuleName}
-    >
+> 
         {#if $spaceSeperatedNames}
             {convertToSpacedString(name)}
         {:else}
@@ -123,10 +123,11 @@
       ease color 0.2s;
       color: rgba(150,150,150);
       text-align: center;
-      font-size: 12px;
-      font-weight: 500;
+      font-size: 13px;
+      font-weight: 600;
       position: relative;
       padding: 10px;
+      font-family: urbanist-variable;
 
       &.highlight::before {
         content: "";
@@ -139,7 +140,7 @@
       }
 
       &:hover {
-        background-color: rgba($background-color, 0.2);
+        background-color: rgba($background-color, 0.3);
         color: gray;
       }
 
@@ -150,9 +151,11 @@
     }
 
     .settings {
-      background-color: rgba($background-color, 0.5);
-      border-left: solid 1px $accent-color;
+      background-color: rgba($background-color, 0.3);
+      border: solid 1px $accent-color;
       padding: 0 11px 0 7px;
+      font-size: 500px;
+      font-weight: 600;
     }
   }
 </style>

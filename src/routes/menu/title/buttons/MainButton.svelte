@@ -44,12 +44,15 @@
     align-items: center;
     cursor: pointer;
     will-change: background-position;
-    scale: 90%;
+    scale: 80%;
     background-color: rgba($background-color, $transparency);
     margin: -10px;
     border-radius: 12px;
     background-size: 200% 100%;
     column-gap: 15px;
+    box-shadow: 0px 0px 10px rgba(black, 0.5);
+    margin-left: -50px;
+    font-family: urbanist-variable;
      
 
     &:hover {
@@ -67,6 +70,7 @@
     border-radius: 50%;
     transition: ease background-color 0.2s;
     position: relative;
+    scale: 90%;
 
     img {
       position: absolute;
@@ -77,7 +81,7 @@
   }
 
   .title {
-    font-size: 26px;
+    font-size: 28px;
     color: $text-color;
     font-weight: 600;
   }

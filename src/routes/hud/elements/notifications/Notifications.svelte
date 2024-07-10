@@ -53,7 +53,7 @@
                 animate:flip={{ duration: 150 }}
                 in:fly={{ x: -30, duration: 150 }}
                 out:fly={{ x: -30, duration: 150 }}
-        >
+    > 
             <Notification {title} {message} {severity}/>
         </div>
     {/each}

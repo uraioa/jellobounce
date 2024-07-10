@@ -54,7 +54,7 @@
     display: flex;
     flex-direction: column;
     border-radius: 12px;
-     
+    font-family: urbanist-variable;
   }
 
   .title {

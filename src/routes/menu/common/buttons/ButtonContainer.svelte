@@ -6,12 +6,9 @@
     @import "../../../../colors.scss";
 
     .button-container {
-      background-color: rgba($background-color, $transparency);
-      padding: 15px 30px;
+      background: none;
       width: max-content;
-      border-radius: 12px;
       display: flex;
-      column-gap: 20px;
-       
+      column-gap: 1px;
     }
 </style>

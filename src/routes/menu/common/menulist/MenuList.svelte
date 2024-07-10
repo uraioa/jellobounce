@@ -47,8 +47,7 @@
   @import "../../../../colors";
 
   .menu-list {
-    background-color: rgba($background-color, $transparency);
-     
+    background-color: rgba($background-color, 0);
     flex: 1;
     border-radius: 12px;
     margin-bottom: 25px;

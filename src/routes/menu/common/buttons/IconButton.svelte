@@ -19,6 +19,8 @@
 </div>
 
 <style lang="scss">
+  @import "../../../../colors.scss";
+  
   .icon-button {
     position: relative;
   }
@@ -30,5 +32,9 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    background-color: rgba($background-color, $transparency);
+    box-shadow: 0px 0px 10px rgba($background-color, 0.5);
+    border-radius: 12px;
+    margin-right: 10px;
   }
 </style>

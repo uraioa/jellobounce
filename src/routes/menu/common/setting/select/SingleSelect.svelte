@@ -44,6 +44,8 @@
     font-size: 20px;
     padding: 15px 20px;
     transition: ease color .2s;
+    box-shadow: 0px 0px 10px rgba($background-color, 0.5);
+    font-family: urbanist-variable;
 
     &:hover {
       color: $text-color;

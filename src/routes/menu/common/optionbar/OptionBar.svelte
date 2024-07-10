@@ -10,13 +10,18 @@
     @import "../../../../colors";
 
     .option-bar {
-      background-color: rgba($background-color, 0.68);
+      background-color: rgba($background-color, $transparency);
       padding: 15px 30px;
       display: flex;
       border-radius: 12px;
       align-items: center;
       column-gap: 30px;
-      margin-bottom: 25px;
-       
+      margin-bottom: 10px;
+      box-shadow: 0px 0px 10px rgba($background-color, 0.5);
+      scale: 80%;
+      margin-left: -12%;
+      margin-right: -12%;
+      font-family: urbanist-variable;
+      font-size: 16px;
     }
 </style>

@@ -77,7 +77,7 @@
             </div>
         {/if}
         <div class="status">
-            <div class="pair" transition:fade|global={{duration: 500}}>
+            <div class="pair">
                 {#if playerData.armor > 0}
                     <Status
                             max={20}
@@ -104,18 +104,19 @@
 
             {#if playerData.gameMode !== "creative"}
                 {#if playerData.absorption > 0}
-                    <div class="pair" transition:fade|global={{duration: 500}}>
+                    <div class="pair">
                         <Status
                                 max={maxAbsorption}
                                 value={playerData.absorption}
                                 color="#3b3b3b99"
                                 alignRight={false}
+                                icon="heart2"
                         />
 
                         <div></div>
                     </div>
                 {/if}
-                <div class="pair" transition:fade|global={{duration: 500}}>
+                <div class="pair">
                     <Status
                             max={playerData.maxHealth}
                             value={playerData.health}
@@ -142,7 +143,7 @@
             {/if}
         </div>
 
-        <div class="hotbar-elements" transition:fade|global={{duration: 500}}>
+        <div class="hotbar-elements">
             <div class="slider" style="left: {currentSlot * 45}px"></div>
             <div class="slots" bind:this={slotsElement}>
                 <div class="slot"></div>
@@ -171,6 +172,7 @@
     //bottom: 15px;
     //left: 50%;
     //transform: translateX(-50%);
+    font-family: urbanist-variable;
   }
 
   .pair {
@@ -230,7 +232,7 @@
 
   .item-name {
     color: white;
-    font-size: 14px;
+    scale: 110%;
     margin: 0 auto 15px;
     font-weight: 500;
     width: max-content;
@@ -238,9 +240,10 @@
   }
 
   .overlay-message {
+    scale: 110%;
     text-align: center;
     color: white;
-    margin-bottom: 15px;
+    margin-bottom: 22px;
     text-shadow: 0px 0px 10px rgba(black, 1);
   }
 </style>

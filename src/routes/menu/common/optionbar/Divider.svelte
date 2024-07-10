@@ -6,8 +6,7 @@
   .divider {
     height: 100%;
     width: 4px;
-    background-color: rgba($background-color, .36);
+    background-color: rgba($background-color, 0.3);
     border-radius: 12px;
-     
   }
 </style>

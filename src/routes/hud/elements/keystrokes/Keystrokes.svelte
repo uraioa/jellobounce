@@ -27,7 +27,7 @@
     listen("keybindChange", updateKeybinds)
 </script>
 
-<div class="keystrokes" transition:fade|global={{duration: 500}}>
+<div class="keystrokes"> 
     <Key key={keyForward} gridArea="a" />
     <Key key={keyLeft} gridArea="b" />
     <Key key={keyBack} gridArea="c" />

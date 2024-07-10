@@ -178,7 +178,7 @@
             class="title"
             on:mousedown={onMouseDown}
             on:contextmenu|preventDefault={toggleExpanded}
-    >
+> 
         <img
                 class="icon"
                 src="img/clickgui/icon-{category.toLowerCase()}.svg"
@@ -209,6 +209,7 @@
     box-shadow: 0 0 10px rgba($background-color, 0.4);
     will-change: transform;
     box-shadow: inset 0 125px 100px -100px rgba(black, 0.8), 0px 0px 10px rgba(black, 0.5);
+    font-family: urbanist-variable;
   }
 
   .title {
@@ -223,9 +224,9 @@
     text-shadow: 0px 0px 20px rgba(150,150,150);
 
     .category {
-      font-size: 14px;
+      font-size: 15px;
       color: $text-color;
-      font-weight: 500;
+      font-weight: 600;
     }
   }
 

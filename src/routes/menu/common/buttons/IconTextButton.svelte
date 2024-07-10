@@ -23,14 +23,17 @@
     .icon-text-button {
       display: flex;
       border: none;
-      border-radius: 6px;
+      border-radius: 12px;
       align-items: center;
       overflow: hidden;
-      background: linear-gradient(to left, rgba($background-color, .36) 50%, $accent-color 50%);
+      background: linear-gradient(to left, rgba($background-color, $transparency) 50%, $accent-color 50%);
       background-size: 200% 100%;
       background-position: right bottom;
       will-change: background-position;
       transition: ease opacity .2s, background-position .2s ease-out;
+      scale: 95%;
+      box-shadow: 0px 0px 10px rgba($background-color, 0.5);
+      font-family: urbanist-variable;
 
       &:not([disabled]):hover {
         &:hover {

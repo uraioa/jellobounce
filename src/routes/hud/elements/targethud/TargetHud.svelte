@@ -57,12 +57,13 @@
         //left: calc(50% + 20px);
         //transform: translateY(-50%); // overwrites the component transform
         min-width: 250px;
-        background-color: rgba(black, $transparency);
+        background-color: rgba($background-color, $transparency);
         border-radius: 12px;
         overflow: hidden;
         height: 66px;
         box-shadow: 0px 0px 10px rgba(black, 0.5);
         border: solid 1px $border-thing;
+        font-family: urbanist-variable;
     }
 
     .main-wrapper {
@@ -80,24 +81,25 @@
         align-self: flex-start;
         padding-left: 56px;
         padding-top: 3px;
-        font-size: 20px;
-        padding-right: 6px;
+        font-size: 21px;
+        padding-right: 5px;
     }
 
     .health-stats {
         grid-area: b;
         position: absolute;
-        left: 65px;
+        left: 64px;
         bottom: 11px;
         padding-top: 9px;
 
         .stat {
             .value {
                 color: $text-dimmed-color;
-                font-size: 14px;
+                font-size: 16px;
                 min-width: 18px;
                 display:inline-block;
                 text-align: right;
+                font-weight: 500;
             }
         }
     }

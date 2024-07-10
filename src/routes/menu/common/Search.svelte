@@ -21,12 +21,12 @@
     font-family: "Inter", sans-serif;
     font-size: 20px;
     border-radius: 12px;
-    border-bottom: solid 2px $accent-color;
     background-image: url("/img/menu/icon-search.svg");
     background-repeat: no-repeat;
     background-position: 20px center;
     padding: 20px 20px 20px 60px;
     flex: 1;
-     
+    font-family: urbanist-variable;
+    box-shadow: 0px 0px 10px rgba(black, 0.5);
   }
 </style>

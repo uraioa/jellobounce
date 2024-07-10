@@ -63,6 +63,8 @@
     overflow: hidden;
     padding-right: 10px;
     min-width: 350px;
+    box-shadow: 0px 0px 10px rgba(black, 0.5);
+    font-family: urbanist-variable;
 
     .title {
       color: $text-color;
@@ -87,7 +89,7 @@
       align-items: center;
       justify-content: center;
       margin-right: 10px;
-      border-radius: 6px;
+      border-radius: 12px;
 
       &.error {
         background-color: $menu-error-color;

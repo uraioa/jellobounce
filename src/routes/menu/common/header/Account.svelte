@@ -39,7 +39,7 @@
     <button class="button-change-account" type="button" on:click={() => openScreen("altmanager")}>
         <ToolTip text="Change account"/>
 
-        <img class="icon" src="img/menu/icon-pen.svg" alt="change account">
+        <img class="icon" src="a" alt="">
     </button>
 </div>
 
@@ -49,7 +49,7 @@
   .account {
     background-color: rgba($background-color, $transparency);
     padding: 15px 15px;
-    padding-right: 20px;
+    padding-right: 15px;
     border-radius: 12px;
     align-items: center;
     display: grid;
@@ -58,6 +58,10 @@
         "a d c";
     grid-template-columns: max-content 1fr max-content;
     column-gap: 15px;
+    box-shadow: 0px 0px 10px rgba(black, 0.5);
+    width: 300px;
+    font-family: urbanist-variable;
+    scale: 80%;
   }
 
   .avatar {
@@ -70,14 +74,14 @@
   .username {
     font-weight: 600;
     color: $text-color;
-    font-size: 20px;
+    font-size: 25px;
     grid-area: b;
     align-self: flex-end;
   }
 
   .account-type {
     font-weight: 500;
-    font-size: 20px;
+    font-size: 22px;
     grid-area: d;
     align-self: flex-start;
 
@@ -93,10 +97,11 @@
   .button-change-account {
     background-color: transparent;
     border: none;
-    grid-area: c;
+    grid-area: a;
     position: relative;
-    height: max-content;
     cursor: pointer;
-    padding-left: 20px;
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
   }
 </style>

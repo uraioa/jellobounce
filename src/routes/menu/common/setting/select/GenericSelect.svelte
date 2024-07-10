@@ -69,6 +69,8 @@
     justify-content: space-between;
     border-radius: 12px;
     transition: ease border-radius .2s;
+    box-shadow: 0px 0px 10px rgba($background-color, 0.5);
+    font-family: urbanist-variable;
 
     .title {
       color: $text-color;
@@ -85,10 +87,10 @@
     position: absolute;
     z-index: 1000;
     width: 100%;
-    border-radius: 0 0 5px 5px;
+    border-radius: 0 0 12px 12px;
     max-height: 250px;
     overflow: auto;
-    background-color: rgba($background-color, $transparency);
-     
+    background-color: rgba($background-color, 0.5);
+    box-shadow: 0px 0px 10px rgba($background-color, 0.5);
   }
 </style>

@@ -50,6 +50,7 @@
 </script>
 
 <Menu>
+    <div class="shaderfix"></div>
     <div class="content">
         <div class="main-buttons">
             {#if regularButtonsShown}
@@ -94,6 +95,15 @@
 </Menu>
 
 <style>
+
+    .shaderfix {
+        position: absolute;
+        background-color: rgba(black, 0.1);
+        width: 7050px;
+        height: 4050px;
+        z-index: -9999999;
+    }
+    
     .content {
         flex: 1;
         display: grid;

@@ -29,11 +29,12 @@
     border: none;
     background-color: $accent-color;
     color: $text-color;
-    font-family: "Inter", sans-serif;
+    font-family: urbanist-variable;
     padding: 20px;
     border-radius: 12px;
     font-size: 20px;
     transition: ease background-color .2s, ease opacity .2s;
+    box-shadow: 0px 0px 10px rgba($background-color, 0.5);
 
     &.inset {
       margin: 0 30px;

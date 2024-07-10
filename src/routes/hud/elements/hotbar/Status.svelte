@@ -20,7 +20,7 @@
           style="width: {Math.floor(
           (value / max) * 100,
       )}%; background-color: {color};"
-  ></div>
+></div>
 </div>
 
 <style lang="scss">
@@ -33,6 +33,7 @@
   right: 5px;
   top: 50%;
   transform: translateY(-50%);
+  scale: 110%;
 }
 
 .icon {

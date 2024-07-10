@@ -54,13 +54,19 @@
         "a b c"
         "a d c";
     grid-template-columns: max-content 1fr max-content;
-    background-color: rgba($background-color, .36);
-    padding: 15px 25px;
+    background-color: rgba($background-color, $transparency);
+    padding: 15px 15px;
     column-gap: 15px;
-    border-radius: 6px;
+    border-radius: 12px;
     transition: ease background-color .2s;
     align-items: center;
     cursor: grab;
+    box-shadow: 0px 0px 10px rgba(black, 0.5);
+    height: 100px;
+    scale: 80%;
+    margin-left: -13.5%;
+    margin-right: -13.5%;
+    margin-bottom: -15px;
 
     &:hover {
       background-color: $accent-color;

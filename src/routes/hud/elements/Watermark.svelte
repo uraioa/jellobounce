@@ -1,8 +1,4 @@
-<script lang="ts">
-    import {fade} from "svelte/transition"
-</script>
-
-<div class="watermark" transition:fade|global={{duration: 500}}>jello</div>
+<div class="watermark">jello</div>
 <div class="shaderfix"></div>
 
 <style lang="scss">
@@ -11,7 +7,7 @@
         //top: 15px;
         //left: 15px;
         font-family: Borel;
-        color: rgba(white, 0.9);
+        color: rgba(white, 1);
         font-size: 50px;
         z-index: 1;
         text-shadow: 0px 0px 10px rgba(black, 0.3);

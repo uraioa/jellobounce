@@ -140,7 +140,7 @@
                             on:contextmenu|preventDefault={() => $highlightModuleName = name}
                             class:selected={selectedIndex === index}
                             bind:this={resultElements[index]}
-                    >
+                > 
                         <div class="module-name">
                             {$spaceSeperatedNames ? convertToSpacedString(name) : name}
                         </div>

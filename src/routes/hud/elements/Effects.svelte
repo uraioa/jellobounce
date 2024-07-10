@@ -18,7 +18,7 @@
 <div class="effects">
     {#each effects as e}
         <div class="effect" transition:fade|global={{duration: 200}}>
-            <span class="name" style="color: {'#' + e.color.toString(16)}">{e.localizedName}: {e.amplifier + 1}</span>
+            <span class="name" style="color: {'#' + e.color.toString(16)}">{e.localizedName} {e.amplifier + 1}</span>
             <span class="duration">{formatTime(e.duration)}</span>
         </div>
     {/each}
@@ -28,7 +28,7 @@
   @import "../../../colors.scss";
 
   .effect {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 14px;
     text-align: left;
     background-color: rgba(black, $transparency);
@@ -36,6 +36,7 @@
     box-shadow: 0px 0px 10px rgba(black, 0.5);
     border-left: solid 1px $border-thing;
     border-right: solid 1px $border-thing;
+    font-family: urbanist-variable;
 
     .duration {
       color: white;

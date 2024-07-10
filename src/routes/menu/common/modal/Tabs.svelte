@@ -46,7 +46,7 @@
   }
 
   .tab-button {
-    font-family: "Inter", sans-serif;
+    font-family: "urbanist-variable", sans-serif;
     background-color: rgba($background-color, .36);
     color: $text-color;
     padding: 10px;
@@ -59,6 +59,8 @@
     row-gap: 10px;
     cursor: pointer;
     transition: ease border-color .2s;
+    box-shadow: 0px 0px 10px rgba($background-color, 0.5);
+    font-family: urbanist-variable;
 
     .icon {
       height: 30px;

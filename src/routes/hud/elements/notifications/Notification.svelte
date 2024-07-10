@@ -22,12 +22,13 @@
     column-gap: 10px;
     background: rgba(black, $transparency);
     border-radius: 12px;
-    min-width: 298px;
+    min-width: 250px;
     overflow: hidden;
     padding: 10px;
     margin-bottom: 10px;
     box-shadow: 0px 0px 10px rgba(black, 0.5);
     border: solid 1px $border-thing;
+    font-family: urbanist-variable;
   }
 
   .icon {
@@ -91,14 +92,15 @@
 
   .title {
     grid-area: b;
-    font-size: 14px;
+    font-size: 16px;
     color: white;
     font-weight: 600;
   }
 
   .message {
     grid-area: c;
-    font-size: 12px;
+    font-size: 14px;
     color: #cbd1e3;
+    font-weight: 500;
   }
 </style>

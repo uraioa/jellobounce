@@ -3,8 +3,12 @@
     import Notifications from "./Notifications.svelte";
 </script>
 
+<div class="skibidi">
+  <div class="logo">jellobounce</div>
+</div>
+
 <div class="header">
-    <img class="logo" src="img/lb-logo.svg" alt="logo">
+  <img src="a" alt="">
 
     <Notifications/>
 
@@ -12,10 +16,20 @@
 </div>
 
 <style lang="scss">
+
+  .skibidi {
+    font-family: borel;
+    color: white;
+    text-shadow: 0px 0px 10px rgba(black, 0.3);
+    font-size: 80px;
+  }
+
   .header {
-    display: flex;
+    position: absolute;
     justify-content: space-between;
-    margin-bottom: 60px;
+    margin-bottom: 25px;
     align-items: center;
+    right: 25px;
+    top: 25px;
   }
 </style>

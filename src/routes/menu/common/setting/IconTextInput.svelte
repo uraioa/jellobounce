@@ -43,12 +43,13 @@
     color: $text-color;
     font-family: "Inter", sans-serif;
     font-size: 20px;
-    background-color: rgba($background-color, 0);
+    background-color: rgba($background-color, 0.3);
     border: none;
     padding: 0 20px 0 18px;
-    border-radius: 0 5px 5px 0;
-    border-left: solid 2px $background-color;
+    border-radius: 0 12px 12px 0;
     width: 100%;
+    box-shadow: 0px 0px 10px rgba($background-color, 0.5);
+    font-family: urbanist-variable;
      
 
     &:invalid {

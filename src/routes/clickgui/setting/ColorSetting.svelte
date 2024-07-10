@@ -99,7 +99,7 @@
             class="color-pickr-button"
             on:click={() => (hidden = !hidden)}
             style="background-color: {hex};"
-        ></button>
+    > </button>
     </div>
     <div class="color-picker" class:hidden>
         <button bind:this={colorPicker} />
