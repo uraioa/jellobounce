@@ -5,11 +5,11 @@
         TogglableSetting,
         BooleanSetting as TBooleanSetting,
     } from "../../../integration/types";
+    import ExpandArrow from "./common/ExpandArrow.svelte";
     import GenericSetting from "./common/GenericSetting.svelte";
     import Switch from "./common/Switch.svelte";
-    import {setItem} from "../../../integration/persistent_storage";
+    import { setItem } from "../../../integration/persistent_storage";
     import {convertToSpacedString, spaceSeperatedNames} from "../../../theme/theme_config";
-    import ExpandArrow from "./common/ExpandArrow.svelte";
 
     export let setting: ModuleSetting;
     export let path: string;

@@ -209,7 +209,6 @@
     box-shadow: 0 0 10px rgba($background-color, 0.4);
     will-change: transform;
     box-shadow: inset 0 125px 100px -100px rgba(black, 0.8), 0px 0px 10px rgba(black, 0.5);
-    font-family: urbanist-variable;
   }
 
   .title {
@@ -222,6 +221,7 @@
     cursor: grab;
     text-align: center;
     text-shadow: 0px 0px 20px rgba(150,150,150);
+    font-family: urbanist-variable;
 
     .category {
       font-size: 15px;

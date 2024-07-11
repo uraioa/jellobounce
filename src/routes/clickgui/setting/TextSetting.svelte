@@ -17,9 +17,8 @@
 
 <div class="setting">
     <div class="name">{$spaceSeperatedNames ? convertToSpacedString(cSetting.name) : cSetting.name}</div>
-    <input type="text" class="value"
-           placeholder={$spaceSeperatedNames ? convertToSpacedString(setting.name) : setting.name}
-           bind:value={cSetting.value} on:input={handleChange} spellcheck="false">
+    <input type="text" class="value" placeholder={setting.name} bind:value={cSetting.value} on:input={handleChange}
+           spellcheck="false">
 </div>
 
 <style lang="scss">
@@ -45,7 +44,7 @@
     border: none;
     border-bottom: solid 2px $accent-color;
     padding: 5px;
-    border-radius: 3px;
+    border-radius: 6px;
     transition: ease border-color .2s;
 
     &::-webkit-scrollbar {

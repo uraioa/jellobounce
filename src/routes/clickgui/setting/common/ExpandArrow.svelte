@@ -1,7 +1,10 @@
 <script lang="ts">
     import {createEventDispatcher} from "svelte";
+
     export let expanded: boolean;
+
     const dispatch = createEventDispatcher();
+
     function handleClick() {
         expanded = !expanded;
         dispatch("click");
@@ -18,6 +21,7 @@
         cursor: pointer;
         background-color: transparent;
         border: none;
+
         &::after {
             content: "";
             display: block;
@@ -35,6 +39,7 @@
                 ease opacity 0.2s,
                 ease transform 0.4s;
         }
+
         &.expanded::after {
             transform: translateY(-50%) rotate(0);
             opacity: 1;

@@ -2,10 +2,10 @@
     import {createEventDispatcher} from "svelte";
     import type {ChoiceSetting, ModuleSetting,} from "../../../integration/types";
     import Dropdown from "./common/Dropdown.svelte";
-    import GenericSetting from "./common/GenericSetting.svelte";
-    import {setItem} from "../../../integration/persistent_storage";
-    import {convertToSpacedString, spaceSeperatedNames} from "../../../theme/theme_config";
     import ExpandArrow from "./common/ExpandArrow.svelte";
+    import GenericSetting from "./common/GenericSetting.svelte";
+    import { setItem } from "../../../integration/persistent_storage";
+    import {convertToSpacedString, spaceSeperatedNames} from "../../../theme/theme_config";
 
     export let setting: ModuleSetting;
     export let path: string;

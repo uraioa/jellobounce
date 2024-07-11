@@ -154,8 +154,31 @@
       background-color: rgba($background-color, 0.3);
       border: solid 1px $accent-color;
       padding: 0 11px 0 7px;
-      font-size: 500px;
-      font-weight: 600;
+    }
+
+    &.has-settings {
+      .name::after {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 10px;
+        width: 10px;
+        right: 15px;
+        top: 50%;
+        background-image: url("a");
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.5;
+        transform-origin: 50% 50%;
+        transform: translateY(-50%) rotate(-90deg);
+        transition: ease opacity 0.2s,
+        ease transform 0.4s;
+      }
+
+      &.expanded .name::after {
+        transform: translateY(-50%) rotate(0);
+        opacity: 1;
+      }
     }
   }
 </style>

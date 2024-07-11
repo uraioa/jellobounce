@@ -38,7 +38,7 @@
                         class="option"
                         class:active={o === value}
                         on:click={() => updateValue(o)}
-            > 
+                >
                     {$spaceSeperatedNames ? convertToSpacedString(o) : o}
                 </div>
             {/each}

@@ -70,7 +70,7 @@
                 <span>{printableKeyName}</span>
             {/if}
         {:else}
-            <span>Listening...</span>
+            <span>Press any key</span>
         {/if}
     </button>
 </div>
