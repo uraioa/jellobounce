@@ -27,12 +27,13 @@
   .icon-text-input {
     display: grid;
     grid-template-columns: max-content 1fr max-content;
+    font-family: sf-pro;
   }
 
   .icon {
     height: 64px;
     width: 64px;
-    background-color: $accent-color;
+    background-color: rgba($accent-color, 0.7);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,14 +44,12 @@
     color: $text-color;
     font-family: "Inter", sans-serif;
     font-size: 20px;
-    background-color: rgba($background-color, 0.3);
+    background-color: rgba($background-color, .3);
     border: none;
     padding: 0 20px 0 18px;
     border-radius: 0 12px 12px 0;
+    border-left: solid 2px $background-color;
     width: 100%;
-    box-shadow: 0px 0px 10px rgba($background-color, 0.5);
-    font-family: urbanist-variable;
-     
 
     &:invalid {
       border: solid 2px $menu-error-color;

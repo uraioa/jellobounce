@@ -63,8 +63,9 @@
     overflow: hidden;
     padding-right: 10px;
     min-width: 350px;
-    box-shadow: 0px 0px 10px rgba(black, 0.5);
-    font-family: urbanist-variable;
+    box-shadow: 0px 0px 10px rgba($shadow-color, $transparency);
+    border: solid 1px $border-thing;
+    font-family: sf-pro;
 
     .title {
       color: $text-color;
@@ -76,7 +77,7 @@
 
     .message {
       color: $text-dimmed-color;
-      font-weight: 500;
+      font-weight: 400;
       grid-area: c;
     }
 
@@ -84,12 +85,11 @@
       grid-area: a;
       height: 65px;
       width: 65px;
-      background-color: $accent-color;
+      background-color: rgba($accent-color, 0.7);
       display: flex;
       align-items: center;
       justify-content: center;
       margin-right: 10px;
-      border-radius: 12px;
 
       &.error {
         background-color: $menu-error-color;

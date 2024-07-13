@@ -22,13 +22,14 @@
   .switch-setting {
     display: flex;
     align-items: center;
+    font-family: sf-pro;
   }
 
   .title {
     color: $text-color;
     font-size: 20px;
     margin-left: 10px;
-    font-weight: 500;
+    font-weight: 400;
   }
 
   .slider {
@@ -41,7 +42,7 @@
     transition: ease 0.4s;
     height: 14px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba($background-color, 0.5);
+    box-shadow: 0px 0px 10px rgba($shadow-color, 0.5);
 
     &::before {
       position: absolute;
@@ -78,7 +79,7 @@
 
     input:checked + .slider:before {
       transform: translateX(27px);
-      background-color: $accent-color;
+      background-color: rgba($accent-color, 0.7);
     }
   }
 </style>

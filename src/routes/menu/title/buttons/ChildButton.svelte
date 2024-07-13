@@ -13,13 +13,13 @@
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <div class="child-button" on:click|stopPropagation={() => dispatch("click")} class:parent-hovered={parentHovered}>
-    <ToolTip color="black" text="Join Realms server" />
+    <ToolTip color="black" text="who the fuck plays on realms anyways" />
 
     <div class="icon">
         {#if parentHovered}
-            <img transition:fade="{{ duration: 200 }}" src="img/menu/icon-{icon}-hover.svg" alt={title}>
+            <img transition:fade="{{ duration: 150 }}" src="img/menu/icon-{icon}-hover.svg" alt={title}>
         {:else}
-            <img transition:fade="{{ duration: 200 }}" src="img/menu/icon-{icon}.svg" alt={title}>
+            <img transition:fade="{{ duration: 150 }}" src="img/menu/icon-{icon}.svg" alt={title}>
         {/if}
     </div>
 
@@ -34,10 +34,11 @@
       display: flex;
       align-items: center;
       border-radius: 6px;
-      background-color: $accent-color;
-      transition: ease background-color .2s;
+      background-color: rgba($accent-color, 0.7);
+      transition: ease background-color .15s;
       padding: 15px;
-       
+      box-shadow: 0px 0px 10px rgba($shadow-color, 0.5);
+      font-family: sf-pro;
 
       &.parent-hovered {
         background-color: $text-color;
@@ -53,6 +54,7 @@
       font-weight: 600;
       font-size: 16px;
       transition: ease color 0.2s;
+      margin-left: 10px;
     }
 
     .icon { /* necessary because svelte's transition system sucks */

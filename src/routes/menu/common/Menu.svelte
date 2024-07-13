@@ -1,6 +1,6 @@
 <script lang="ts">
     import Header from "./header/Header.svelte";
-    import {fade} from "svelte/transition";
+    import {fly} from "svelte/transition";
     import {onMount} from "svelte";
 
     const transitionDuration = 700; // TODO: suboptimal
@@ -16,7 +16,7 @@
 
 <div class="menu">
     {#if ready}
-        <div transition:fade|global={{duration: 650}}>
+        <div transition:fly|global={{duration: 500, y: -100}}>
             <Header/>
         </div>
 
@@ -55,7 +55,7 @@
     }
   }
 
-  @media screen and (max-height: 1000px) {
+  @media screen and (max-height: 1100px) {
     .menu {
       zoom: 0.8;
       height: 125vh;

@@ -54,22 +54,20 @@
         "a b c"
         "a d c";
     grid-template-columns: max-content 1fr max-content;
-    background-color: rgba($background-color, $transparency);
-    padding: 15px 15px;
+    background-color: rgba($background-color, .35);
+    padding: 10px 20px;
     column-gap: 15px;
-    border-radius: 12px;
-    transition: ease background-color .2s;
+    border-radius: 6px;
+    transition: ease background-color .15s;
     align-items: center;
     cursor: grab;
-    box-shadow: 0px 0px 10px rgba(black, 0.5);
-    height: 100px;
-    scale: 80%;
-    margin-left: -13.5%;
-    margin-right: -13.5%;
-    margin-bottom: -15px;
+    box-shadow: 0px 0px 10px rgba($shadow-color, 0.3);
+    margin-left: -14px;
+    margin-right: -14px;
+    font-family: sf-pro;
 
     &:hover {
-      background-color: $accent-color;
+      background-color: rgba($accent-color, 0.7);
 
       .subtitle {
         color: $text-color;

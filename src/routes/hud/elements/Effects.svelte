@@ -33,10 +33,10 @@
     text-align: left;
     background-color: rgba(black, $transparency);
     padding: 5px 8px;
-    box-shadow: 0px 0px 10px rgba(black, 0.5);
+    box-shadow: 0px 0px 10px rgba($shadow-color, 0.5);
     border-left: solid 1px $border-thing;
     border-right: solid 1px $border-thing;
-    font-family: urbanist-variable;
+    font-family: sf-pro;
 
     .duration {
       color: white;

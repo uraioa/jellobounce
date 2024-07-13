@@ -1,6 +1,24 @@
 @import "colors.scss";
 
 @font-face {
+    font-family: "sf-pro";
+    src: url("./assets/font/sf-pro/SFPRODISPLAYREGULAR.ttf");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "sf-pro";
+    src: url("./assets/font/sf-pro/SFPRODISPLAYMEDIUM.ttf");
+    font-weight: medium;
+}
+
+@font-face {
+    font-family: "sf-pro";
+    src: url("./assets/font/sf-pro/SFPRODISPLAYBOLD.ttf");
+    font-weight: bold;
+}
+
+@font-face {
     font-family: "Inter";
     src: url("./assets/font/inter/Inter-Bold.ttf") format("truetype");
     font-weight: 600;

@@ -172,7 +172,7 @@
     //bottom: 15px;
     //left: 50%;
     //transform: translateX(-50%);
-    font-family: urbanist-variable;
+    font-family: sf-pro;
   }
 
   .pair {
@@ -195,7 +195,7 @@
     position: relative;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0px 0px 10px rgba(black, 0.5);
+    box-shadow: 0px 0px 10px rgba($shadow-color, 0.5);
     border: solid 1px $border-thing;
 
     .slider {
@@ -206,7 +206,7 @@
       border-radius: 12px;
       transition: ease left 0.1s;
       border: solid 1px $accent-color;
-      box-shadow: 0px 0px 10px rgba(black, 0.5);
+      box-shadow: 0px 0px 10px rgba($shadow-color, 0.5);
     }
 
     .slots {
@@ -227,7 +227,7 @@
     position: absolute;
     bottom: 0;
     left: -65px;
-    box-shadow: 0px 0px 10px rgba(black, 0.5);
+    box-shadow: 0px 0px 10px rgba($shadow-color, 0.5);
   }
 
   .item-name {

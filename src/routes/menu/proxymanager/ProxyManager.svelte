@@ -193,9 +193,9 @@
     }
 
     function editProxy(proxy: Proxy) {
-    currentEditProxy = proxy;
-    editProxyModalVisible = true;
-}
+        currentEditProxy = proxy;
+        editProxyModalVisible = true;
+    }
 </script>
 
 <AddProxyModal bind:visible={addProxyModalVisible}/>

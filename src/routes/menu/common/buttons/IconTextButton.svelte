@@ -2,7 +2,6 @@
     import {createEventDispatcher} from "svelte";
 
     export let title: string;
-    export let icon: string;
     export let disabled = false;
 
     const dispatch = createEventDispatcher();
@@ -12,7 +11,6 @@
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <button class="icon-text-button" on:click={() => dispatch("click")} {disabled}>
     <div class="icon">
-        <img src="img/menu/{icon}" alt={title}>
     </div>
     <div class="title">{title}</div>
 </button>
@@ -26,14 +24,13 @@
       border-radius: 12px;
       align-items: center;
       overflow: hidden;
-      background: linear-gradient(to left, rgba($background-color, $transparency) 50%, $accent-color 50%);
+      background: linear-gradient(to left, rgba($background-color, 0.5) 50%, $accent-color 50%);
       background-size: 200% 100%;
       background-position: right bottom;
       will-change: background-position;
-      transition: ease opacity .2s, background-position .2s ease-out;
-      scale: 95%;
-      box-shadow: 0px 0px 10px rgba($background-color, 0.5);
-      font-family: urbanist-variable;
+      transition: ease opacity .15s, background-position .15s ease-out;
+      font-family: sf-pro;
+      height: 58px;
 
       &:not([disabled]):hover {
         &:hover {
@@ -47,19 +44,10 @@
       }
     }
 
-    .icon {
-      height: 58px;
-      width: 58px;
-      background-color: $accent-color;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
     .title {
       font-size: 20px;
-      font-weight: 500;
+      font-weight: 400;
       color: $text-color;
-      padding: 0 30px;
+      padding: 0 25px;
     }
 </style>

@@ -1,8 +1,8 @@
 <script lang="ts">
-    import {fade} from "svelte/transition";
+    import {fly} from "svelte/transition";
 </script>
 
-<div class="option-bar" transition:fade|global={{duration: 650}}>
+<div class="option-bar" transition:fly|global={{duration: 500, x: 1000}}>
     <slot />
 </div>
 
@@ -16,12 +16,8 @@
       border-radius: 12px;
       align-items: center;
       column-gap: 30px;
-      margin-bottom: 10px;
-      box-shadow: 0px 0px 10px rgba($background-color, 0.5);
-      scale: 80%;
-      margin-left: -12%;
-      margin-right: -12%;
-      font-family: urbanist-variable;
-      font-size: 16px;
+      margin-bottom: 25px;
+      border: solid 1px $border-thing;
+      font-family: sf-pro;
     }
 </style>

@@ -39,7 +39,7 @@
         <img src="img/menu/icon-select-arrow.svg" alt="expand">
     </div>
     {#if expanded}
-        <div class="options" transition:fade|global={{ duration: 200, easing: quintOut }}>
+        <div class="options" transition:fade|global={{ duration: 150, easing: quintOut }}>
             <slot name="options"></slot>
         </div>
     {/if}
@@ -55,27 +55,27 @@
 
     &.expanded {
       .header {
-        border-radius: 12px 12px 0 0;
+        border-radius: 12px;
       }
     }
   }
 
   .header {
-    background-color: $accent-color;
+    background-color: rgba($accent-color, 0.7);
     padding: 20px;
     display: flex;
     column-gap: 20px;
     align-items: center;
     justify-content: space-between;
     border-radius: 12px;
-    transition: ease border-radius .2s;
-    box-shadow: 0px 0px 10px rgba($background-color, 0.5);
-    font-family: urbanist-variable;
+    transition: ease .15s;
+    box-shadow: 0px 0px 10px rgba($shadow-color, 0.5);
+    font-family: sf-pro;
 
     .title {
       color: $text-color;
       font-size: 20px;
-      font-weight: 500;
+      font-weight: 400;
 
       span {
         font-weight: 600;
@@ -87,10 +87,10 @@
     position: absolute;
     z-index: 1000;
     width: 100%;
-    border-radius: 0 0 12px 12px;
+    border-radius: 12px;
     max-height: 250px;
     overflow: auto;
-    background-color: rgba($background-color, 0.5);
-    box-shadow: 0px 0px 10px rgba($background-color, 0.5);
+    background-color: rgba($background-color, $transparency);
+    margin-top: 5px;
   }
 </style>

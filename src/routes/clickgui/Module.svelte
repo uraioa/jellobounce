@@ -124,10 +124,10 @@
       color: rgba(150,150,150);
       text-align: center;
       font-size: 13px;
-      font-weight: 600;
+      font-weight: 500;
       position: relative;
       padding: 10px;
-      font-family: urbanist-variable;
+      font-family: sf-pro;
 
       &.highlight::before {
         content: "";
@@ -165,7 +165,7 @@
         width: 10px;
         right: 15px;
         top: 50%;
-        background-image: url("a");
+        background-image: url("");
         background-position: center;
         background-repeat: no-repeat;
         opacity: 0.5;

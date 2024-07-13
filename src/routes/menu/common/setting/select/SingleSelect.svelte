@@ -26,7 +26,7 @@
     <svelte:fragment slot="options">
         {#each options as o}
             <div on:click={() => handleOptionClick(o)} class="option" class:active={o === value}
-                 transition:slide|global={{ duration: 200, easing: quintOut }}>{o}</div>
+                 transition:slide|global={{ duration: 150, easing: quintOut }}>{o}</div>
         {/each}
     </svelte:fragment>
 </GenericSelect>
@@ -39,13 +39,12 @@
   }
 
   .option {
-    font-weight: 500;
+    font-weight: 400;
     color: $text-dimmed-color;
     font-size: 20px;
     padding: 15px 20px;
     transition: ease color .2s;
-    box-shadow: 0px 0px 10px rgba($background-color, 0.5);
-    font-family: urbanist-variable;
+    font-family: sf-pro;
 
     &:hover {
       color: $text-color;

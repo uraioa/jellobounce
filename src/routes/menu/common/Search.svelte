@@ -18,7 +18,7 @@
     background-color: rgba($background-color, .36);
     border: none;
     color: $text-color;
-    font-family: "Inter", sans-serif;
+    font-family: "sf-pro", sans-serif;
     font-size: 20px;
     border-radius: 12px;
     background-image: url("/img/menu/icon-search.svg");
@@ -26,7 +26,7 @@
     background-position: 20px center;
     padding: 20px 20px 20px 60px;
     flex: 1;
-    font-family: urbanist-variable;
-    box-shadow: 0px 0px 10px rgba(black, 0.5);
+    box-shadow: 0px 0px 10px rgba($shadow-color, 0.5);
+    margin-left: -14px;
   }
 </style>

@@ -83,13 +83,13 @@
     font-family: monospace;
     font-size: 12px;
     color: $text-color;
-    background-color: $accent-color;
+    background-color: rgba($accent-color, 0.7);
     border: none;
     padding: 6px 10px;
     border-radius: 6px;
     width: 100%;
     cursor: pointer;
-    transition: ease background-color .2s;
+    transition: ease background-color .15s;
 
     &:hover {
       background-color: darken(desaturate($accent-color, 30%), 10%);

@@ -1,8 +1,8 @@
 <script lang="ts">
-    import {fade} from "svelte/transition";
+    import {fly} from "svelte/transition";
 </script>
 
-<div class="bottom-button-wrapper" transition:fade|global={{duration: 650}}>
+<div class="bottom-button-wrapper" transition:fly|global={{duration: 500, y: 100}}>
     <slot/>
 </div>
 

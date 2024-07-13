@@ -27,29 +27,29 @@
 
   .button-setting {
     border: none;
-    background-color: $accent-color;
+    background-color: rgba($accent-color, 0.7);
     color: $text-color;
-    font-family: urbanist-variable;
+    font-family: "sf-pro", sans-serif;
     padding: 20px;
     border-radius: 12px;
     font-size: 20px;
-    transition: ease background-color .2s, ease opacity .2s;
-    box-shadow: 0px 0px 10px rgba($background-color, 0.5);
+    transition: ease background-color .15s, ease opacity .15s;
+    box-shadow: 0px 0px 10px rgba($shadow-color, 0.5);
 
     &.inset {
       margin: 0 30px;
     }
 
     &.secondary {
-      background-color: rgba($background-color, 0);
+      background-color: rgba($background-color, .36);
     }
 
     &:not([disabled]):hover {
-      background-color: darken(desaturate($accent-color, 0%), 0%);
+      background-color: darken(desaturate($accent-color, 30%), 10%);
       cursor: pointer;
 
       &.secondary {
-        background-color: darken(desaturate($background-color, 0%), 0%);
+        background-color: darken(desaturate($background-color, 30%), 10%);
       }
     }
 

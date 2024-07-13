@@ -1,5 +1,5 @@
 <script lang="ts">
-    import {fade} from "svelte/transition";
+    import {fade, fly} from "svelte/transition";
     import {createEventDispatcher} from "svelte";
     import {backIn, backOut} from "svelte/easing";
 
@@ -15,13 +15,13 @@
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <div class="main-button" on:mouseenter={() => hovered = true} on:mouseleave={() => hovered = false}
-     on:click={() => dispatch("click")} out:fade|global={{duration: 350, delay: index * 100, easing: backIn}}
-     in:fade|global={{duration: 350, delay: index * 100, easing: backOut}}>
+     on:click={() => dispatch("click")} out:fly|global={{duration: 400, x: -500, delay: index * 100, easing: backIn}}
+     in:fly|global={{duration: 400, x: -500, delay: index * 100, easing: backOut}}>
     <div class="icon">
         {#if !hovered}
-            <img transition:fade={{duration: 200}} src="img/menu/icon-{icon}.svg" alt={icon}>
+            <img transition:fade={{duration: 150}} src="img/menu/icon-{icon}.svg" alt={icon}>
         {:else}
-            <img transition:fade={{duration: 200}} src="img/menu/icon-{icon}-hover.svg" alt={icon}>
+            <img transition:fade={{duration: 150}} src="img/menu/icon-{icon}-hover.svg" alt={icon}>
         {/if}
     </div>
 
@@ -36,26 +36,26 @@
   @import "../../../../colors.scss";
 
   .main-button {
-    padding: 15px;
+    background-color: rgba($background-color, $transparency);
     width: 500px;
-    position: relative;
+    padding: 17px 24px;
     display: grid;
     grid-template-columns: max-content 1fr max-content;
     align-items: center;
     cursor: pointer;
-    will-change: background-position;
-    scale: 80%;
-    background-color: rgba($background-color, $transparency);
-    margin: -10px;
     border-radius: 12px;
+    column-gap: 25px;
+    background: linear-gradient(to left, rgba($background-color, $transparency) 50%, $accent-color 50%);
     background-size: 200% 100%;
-    column-gap: 15px;
-    box-shadow: 0px 0px 10px rgba(black, 0.5);
-    margin-left: -50px;
-    font-family: urbanist-variable;
-     
+    background-position: right bottom;
+    will-change: background-position;
+    transition: background-position .16s ease;
+    font-family: sf-pro;
+    font-weight: normal;
+    border: solid 1px $border-thing;
 
     &:hover {
+      background-position: left bottom;
 
       .icon {
         background-color: $text-color;
@@ -64,13 +64,12 @@
   }
 
   .icon {
-    background-color: $accent-color;
+    background-color: rgba($accent-color, 0.7);
     width: 90px;
     height: 90px;
     border-radius: 50%;
     transition: ease background-color 0.2s;
     position: relative;
-    scale: 90%;
 
     img {
       position: absolute;
@@ -81,8 +80,7 @@
   }
 
   .title {
-    font-size: 28px;
+    font-size: 26px;
     color: $text-color;
-    font-weight: 600;
   }
 </style>

@@ -20,7 +20,6 @@
     cursor: pointer;
     position: relative;
     margin-left: 15px;
-    font-family: urbanist-variable;
   }
 
   .icon {

@@ -7,8 +7,10 @@
 
     .button-container {
       background: none;
-      width: max-content;
       display: flex;
-      column-gap: 1px;
+      column-gap: 15px;
+      padding: 15px;
+      align-items: center;
+      width: max-content;
     }
 </style>

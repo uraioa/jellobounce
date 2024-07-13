@@ -21,7 +21,7 @@
 
 <div bind:this={element}>
     {#if shown}
-        <div transition:fade="{{duration: 150}}" class="tooltip" style="background-color: {color};">{text}</div>
+        <div transition:fade="{{duration: 100}}" class="tooltip" style="background-color: {color};">{text}</div>
     {/if}
 </div>
 
@@ -40,6 +40,8 @@
     top: 0;
     transform: translate(-50%, -45px);
     z-index: 1000;
+    box-shadow: 0px 0px 10px rgba($shadow-color, 0.5);
+    font-family: sf-pro;
 
     &::after {
       content: "";

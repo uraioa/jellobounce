@@ -10,7 +10,7 @@
   @import "../../../../colors.scss";
 
   .tag {
-    background-color: rgba($background-color, 0.3);
+    background-color: rgba($background-color, 0.36);
     color: $text-color;
     font-size: 12px;
     padding: 3px 10px;
@@ -18,6 +18,5 @@
     margin-left: 10px;
     transition: ease color .2s, ease background-color .2s;
     transform: translateY(-3px);
-    font-family: urbanist-variable;
   }
 </style>

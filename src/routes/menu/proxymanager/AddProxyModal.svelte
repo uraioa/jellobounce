@@ -14,7 +14,7 @@
             password = "";
         }
     }
-
+    
     let requiresAuthentication = false;
     let hostPort = "";
     let username = "";

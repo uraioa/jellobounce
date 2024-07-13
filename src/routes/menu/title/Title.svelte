@@ -12,7 +12,7 @@
         toggleBackgroundShaderEnabled
     } from "../../../integration/rest";
     import Menu from "../common/Menu.svelte";
-    import {fade} from "svelte/transition";
+    import {fly} from "svelte/transition";
     import {onMount} from "svelte";
     import {notification} from "../common/header/notification_store";
 
@@ -50,7 +50,6 @@
 </script>
 
 <Menu>
-    <div class="shaderfix"></div>
     <div class="content">
         <div class="main-buttons">
             {#if regularButtonsShown}
@@ -59,6 +58,8 @@
 
                 <MainButton title="Multiplayer" icon="multiplayer" let:parentHovered
                             on:click={() => openScreen("multiplayer")} index={1}>
+                    <ChildButton title="Realms" icon="realms" {parentHovered}
+                                 on:click={() => openScreen("multiplayer_realms")}/>
                 </MainButton>
                 <MainButton title="LiquidBounce" icon="liquidbounce" on:click={toggleButtons} index={2}/>
                 <MainButton title="Options" icon="options" on:click={() => openScreen("options")} index={3}/>
@@ -71,15 +72,15 @@
             {/if}
         </div>
 
-        <div class="additional-buttons" transition:fade|global={{duration: 650}}>
+        <div class="additional-buttons" transition:fly|global={{duration: 500, y: 100}}>
             <ButtonContainer>
-                <IconTextButton icon="icon-exit.svg" title="Exit" on:click={exitClient}/>
-                <IconTextButton icon="icon-change-background.svg" title="Toggle Shader"
+                <IconTextButton title="Exit" on:click={exitClient}/>
+                <IconTextButton title="Toggle Shader"
                                 on:click={toggleBackgroundShaderEnabled}/>
             </ButtonContainer>
         </div>
 
-        <div class="social-buttons" transition:fade|global={{duration: 650}}>
+        <div class="social-buttons" transition:fly|global={{duration: 500, y: 100}}>
             <ButtonContainer>
                 <IconButton title="Forum" icon="nodebb" on:click={() => browse("MAINTAINER_FORUM")}/>
                 <IconButton title="GitHub" icon="github" on:click={() => browse("MAINTAINER_GITHUB")}/>
@@ -87,7 +88,7 @@
                 <IconButton title="Discord" icon="discord" on:click={() => browse("MAINTAINER_DISCORD")}/>
                 <IconButton title="Twitter" icon="twitter" on:click={() => browse("MAINTAINER_TWITTER")}/>
                 <IconButton title="YouTube" icon="youtube" on:click={() => browse("MAINTAINER_YOUTUBE")}/>
-                <IconTextButton title="liquidbounce.net" icon="icon-liquidbounce.net.svg"
+                <IconTextButton title="liquidbounce.net"
                                 on:click={() => browse("CLIENT_WEBSITE")}/>
             </ButtonContainer>
         </div>
@@ -95,15 +96,6 @@
 </Menu>
 
 <style>
-
-    .shaderfix {
-        position: absolute;
-        background-color: rgba(black, 0.1);
-        width: 7050px;
-        height: 4050px;
-        z-index: -9999999;
-    }
-    
     .content {
         flex: 1;
         display: grid;
