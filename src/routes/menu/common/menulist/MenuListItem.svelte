@@ -65,6 +65,7 @@
     margin-left: -14px;
     margin-right: -14px;
     font-family: sf-pro;
+    z-index: 1;
 
     &:hover {
       background-color: rgba($accent-color, 0.7);

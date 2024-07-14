@@ -30,11 +30,12 @@
     background-color: rgba($accent-color, 0.7);
     color: $text-color;
     font-family: "sf-pro", sans-serif;
-    padding: 20px;
+    padding: 15px;
     border-radius: 12px;
     font-size: 20px;
     transition: ease background-color .15s, ease opacity .15s;
     box-shadow: 0px 0px 10px rgba($shadow-color, 0.5);
+    font-weight: 600;
 
     &.inset {
       margin: 0 30px;

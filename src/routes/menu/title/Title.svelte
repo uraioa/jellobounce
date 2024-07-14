@@ -1,6 +1,5 @@
 <script lang="ts">
     import MainButton from "./buttons/MainButton.svelte";
-    import ChildButton from "./buttons/ChildButton.svelte";
     import ButtonContainer from "../common/buttons/ButtonContainer.svelte";
     import IconTextButton from "../common/buttons/IconTextButton.svelte";
     import IconButton from "../common/buttons/IconButton.svelte";
@@ -58,17 +57,15 @@
 
                 <MainButton title="Multiplayer" icon="multiplayer" let:parentHovered
                             on:click={() => openScreen("multiplayer")} index={1}>
-                    <ChildButton title="Realms" icon="realms" {parentHovered}
-                                 on:click={() => openScreen("multiplayer_realms")}/>
                 </MainButton>
-                <MainButton title="LiquidBounce" icon="liquidbounce" on:click={toggleButtons} index={2}/>
-                <MainButton title="Options" icon="options" on:click={() => openScreen("options")} index={3}/>
+                <MainButton title="Configure" icon="options" on:click={toggleButtons} index={2}/>
             {:else if clientButtonsShown}
-                <MainButton title="Proxy Manager" icon="proxymanager" on:click={() => openScreen("proxymanager")}
+                <MainButton title="Proxies" icon="proxymanager" on:click={() => openScreen("proxymanager")}
                             index={0}/>
                 <MainButton title="ClickGUI" icon="clickgui" on:click={() => openScreen("clickgui")} index={1}/>
+                    <MainButton title="Options" icon="options" on:click={() => openScreen("options")} index={2}/>
                 <!-- <MainButton title="Scripts" icon="scripts" index={2}/> -->
-                <MainButton title="Back" icon="back-large" on:click={toggleButtons} index={2}/>
+                <MainButton title="Back" icon="back-large" on:click={toggleButtons} index={3}/>
             {/if}
         </div>
 
@@ -96,6 +93,7 @@
 </Menu>
 
 <style>
+
     .content {
         flex: 1;
         display: grid;
@@ -108,9 +106,13 @@
 
     .main-buttons {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         row-gap: 25px;
         grid-area: a;
+        position: absolute;
+        bottom: 25px;
+        left: 51%;
+        transform: translateX(-50%);
     }
 
     .additional-buttons {

@@ -63,7 +63,6 @@
     overflow: hidden;
     padding-right: 10px;
     min-width: 350px;
-    box-shadow: 0px 0px 10px rgba($shadow-color, $transparency);
     border: solid 1px $border-thing;
     font-family: sf-pro;
 

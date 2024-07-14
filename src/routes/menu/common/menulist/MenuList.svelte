@@ -50,8 +50,9 @@
     background-color: rgba($background-color, $transparency);
     flex: 1;
     border-radius: 12px;
-    margin-bottom: 25px;
+    margin-bottom: -125px;
     position: relative;
     border: solid 1px $border-thing;
+    z-index: 1;
   }
 </style>

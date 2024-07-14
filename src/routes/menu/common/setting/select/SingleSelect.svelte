@@ -40,18 +40,24 @@
 
   .option {
     font-weight: 400;
-    color: $text-dimmed-color;
+    color: rgba(150,150,150);
     font-size: 20px;
-    padding: 15px 20px;
+    padding: 10px 15px;
     transition: ease color .2s;
     font-family: sf-pro;
+    z-index: 1;
 
     &:hover {
-      color: $text-color;
+      background-color: rgba($background-color, 0.1);
+      color: gray;
     }
 
     &.active {
-      color: $accent-color;
+      color: white;
+      text-shadow: 0px 0px 20px gray;
+      background-color: rgba($background-color, 0.4);
+      border-radius: 12px;
+      margin: 5px;
     }
   }
 </style>

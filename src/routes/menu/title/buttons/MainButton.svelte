@@ -1,86 +1,82 @@
 <script lang="ts">
-    import {fade, fly} from "svelte/transition";
-    import {createEventDispatcher} from "svelte";
-    import {backIn, backOut} from "svelte/easing";
+  import {fade, fly} from "svelte/transition";
+  import {createEventDispatcher} from "svelte";
+  import {backIn, backOut} from "svelte/easing";
 
-    export let title: string;
-    export let icon: string;
-    export let index: number;
+  export let title: string;
+  export let icon: string;
+  export let index: number;
 
-    let hovered = false;
+  let hovered = false;
 
-    const dispatch = createEventDispatcher();
+  const dispatch = createEventDispatcher();
 </script>
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <div class="main-button" on:mouseenter={() => hovered = true} on:mouseleave={() => hovered = false}
-     on:click={() => dispatch("click")} out:fly|global={{duration: 400, x: -500, delay: index * 100, easing: backIn}}
-     in:fly|global={{duration: 400, x: -500, delay: index * 100, easing: backOut}}>
-    <div class="icon">
-        {#if !hovered}
-            <img transition:fade={{duration: 150}} src="img/menu/icon-{icon}.svg" alt={icon}>
-        {:else}
-            <img transition:fade={{duration: 150}} src="img/menu/icon-{icon}-hover.svg" alt={icon}>
-        {/if}
-    </div>
+   on:click={() => dispatch("click")} out:fly|global={{duration: 350, y: 64, delay: index * 15, easing: backIn}}
+   in:fly|global={{duration: 350, y: 64, delay: index * 15, easing: backOut}}>
+  <div class="icon">
+      {#if !hovered}
+          <img transition:fade={{duration: 200}} src="img/menu/icon-{icon}.svg" alt={icon}>
+      {:else}
+          <img transition:fade={{duration: 200}} src="img/menu/icon-{icon}-hover.svg" alt={icon}>
+      {/if}
+      <div class="title">{title}</div>
+  </div>
 
-    <div class="title">{title}</div>
-
-    <div class="wrapped-content">
-        <slot parentHovered={hovered}/>
-    </div>
+  <div class="wrapped-content">
+      <slot parentHovered={hovered}/>
+  </div>
 </div>
 
 <style lang="scss">
-  @import "../../../../colors.scss";
+@import "../../../../colors.scss";
 
-  .main-button {
-    background-color: rgba($background-color, $transparency);
-    width: 500px;
-    padding: 17px 24px;
-    display: grid;
-    grid-template-columns: max-content 1fr max-content;
-    align-items: center;
-    cursor: pointer;
-    border-radius: 12px;
-    column-gap: 25px;
-    background: linear-gradient(to left, rgba($background-color, $transparency) 50%, $accent-color 50%);
-    background-size: 200% 100%;
-    background-position: right bottom;
-    will-change: background-position;
-    transition: background-position .16s ease;
-    font-family: sf-pro;
-    font-weight: normal;
-    border: solid 1px $border-thing;
+.main-button {
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 12px;
+  font-family: sf-pro;
+  font-weight: normal;
+  margin-right: 25px;
+  border-radius: 50%;
+  scale: 70%;
 
-    &:hover {
-      background-position: left bottom;
-
-      .icon {
-        background-color: $text-color;
-      }
+  &:hover {
+    .icon {
+      background-color: rgba(white, 0.5);
     }
   }
+}
 
-  .icon {
-    background-color: rgba($accent-color, 0.7);
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    transition: ease background-color 0.2s;
-    position: relative;
+.icon {
+  background-color: rgba($background-color, 0.5);
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  transition: ease background-color 0.2s;
+  position: relative;
+  align-items: center;
 
-    img {
-      position: absolute;
+    .title {
+      position: fixed;
+      font-size: 25px;
+      top: 110%;
+      color: rgba(white, 0.8);
       left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
+      transform: translateX(-50%);
     }
-  }
 
-  .title {
-    font-size: 26px;
-    color: $text-color;
+  img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 80%;
   }
+}
 </style>

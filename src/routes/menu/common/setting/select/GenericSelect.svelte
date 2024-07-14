@@ -62,18 +62,19 @@
 
   .header {
     background-color: rgba($accent-color, 0.7);
-    padding: 20px;
+    padding: 15px;
     display: flex;
     column-gap: 20px;
     align-items: center;
     justify-content: space-between;
     border-radius: 12px;
-    transition: ease .15s;
+    transition: ease .2s;
     box-shadow: 0px 0px 10px rgba($shadow-color, 0.5);
     font-family: sf-pro;
+    z-index: 1;
 
     .title {
-      color: $text-color;
+      color: white;
       font-size: 20px;
       font-weight: 400;
 
@@ -91,6 +92,8 @@
     max-height: 250px;
     overflow: auto;
     background-color: rgba($background-color, $transparency);
-    margin-top: 5px;
+    margin-top: 10px;
+    border: solid 1px $border-thing;
+    backdrop-filter: blur(64);
   }
 </style>

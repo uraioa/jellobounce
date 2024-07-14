@@ -20,6 +20,7 @@
     cursor: pointer;
     position: relative;
     margin-left: 15px;
+    z-index: 1;
   }
 
   .icon {

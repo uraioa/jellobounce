@@ -19,23 +19,21 @@
     @import "../../../../colors.scss";
 
     .icon-text-button {
+      background-color: rgba($background-color, 0.5);
       display: flex;
       border: none;
       border-radius: 12px;
       align-items: center;
       overflow: hidden;
-      background: linear-gradient(to left, rgba($background-color, 0.5) 50%, $accent-color 50%);
       background-size: 200% 100%;
-      background-position: right bottom;
-      will-change: background-position;
-      transition: ease opacity .15s, background-position .15s ease-out;
+      transition: ease .2s background-color;
       font-family: sf-pro;
-      height: 58px;
+      height: 55px;
 
       &:not([disabled]):hover {
         &:hover {
-          background-position: left bottom;
           cursor: pointer;
+          background-color: $accent-color;
         }
       }
 
@@ -45,9 +43,10 @@
     }
 
     .title {
-      font-size: 20px;
+      font-size: 21px;
       font-weight: 400;
-      color: $text-color;
-      padding: 0 25px;
-    }
+      color: rgba($text-color, 0.8);
+      padding: 30px 30px;
+      text-align: center;
+  }
 </style>

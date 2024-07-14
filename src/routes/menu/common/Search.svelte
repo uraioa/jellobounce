@@ -24,9 +24,10 @@
     background-image: url("/img/menu/icon-search.svg");
     background-repeat: no-repeat;
     background-position: 20px center;
-    padding: 20px 20px 20px 60px;
+    padding: 15px 15px 15px 55px;
     flex: 1;
     box-shadow: 0px 0px 10px rgba($shadow-color, 0.5);
-    margin-left: -14px;
+    margin-left: -10px;
+    z-index: 1;
   }
 </style>

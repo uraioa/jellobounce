@@ -18,5 +18,6 @@
     margin-left: 10px;
     transition: ease color .2s, ease background-color .2s;
     transform: translateY(-3px);
+    z-index: 1;
   }
 </style>

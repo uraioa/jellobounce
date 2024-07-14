@@ -47,39 +47,42 @@
   @import "../../../../colors";
 
   .account {
-    background-color: rgba($background-color, $transparency);
     padding: 15px 15px;
     border-radius: 12px;
     align-items: center;
     display: grid;
     grid-template-areas:
         "a b c"
-        "a d c";
+        "a d e";
     grid-template-columns: max-content 1fr max-content;
-    column-gap: 15px;
-    border: solid 1px $border-thing;
     font-family: sf-pro;
+    margin-top: -210px;
+  
   }
 
   .avatar {
-    height: 68px;
-    width: 68px;
+    height: 63px;
+    width: 63px;
     border-radius: 50%;
     grid-area: a;
+    margin-right: 10px;
   }
 
   .username {
+    padding-top: 20px;
     font-weight: 600;
     color: $text-color;
     font-size: 20px;
     grid-area: b;
     align-self: flex-end;
+    margin-right: 7px;
   }
 
   .account-type {
+    padding-top: 20px;
     font-weight: 400;
     font-size: 20px;
-    grid-area: d;
+    grid-area: c;
     align-self: flex-start;
 
     .premium {
@@ -98,8 +101,8 @@
     position: relative;
     height: max-content;
     cursor: pointer;
-    width: 68px;
-    height: 68px;
+    width: 63px;
+    height: 63px;
     border-radius: 50%;
   }
 </style>
