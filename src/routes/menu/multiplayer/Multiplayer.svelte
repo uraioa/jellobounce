@@ -202,13 +202,13 @@
 
     <BottomButtonWrapper>
         <ButtonContainer>
-            <IconTextButton icon="icon-plus-circle.svg" title="Add" on:click={() => addServerModalVisible = true}/>
-            <IconTextButton icon="icon-plane.svg" title="Direct" on:click={() => directConnectModalVisible = true}/>
-            <IconTextButton icon="icon-refresh.svg" title="Refresh" on:click={refreshServers}/>
+            <IconTextButton title="Add" on:click={() => addServerModalVisible = true}/>
+            <IconTextButton title="Direct" on:click={() => directConnectModalVisible = true}/>
+            <IconTextButton title="Refresh" on:click={refreshServers}/>
         </ButtonContainer>
 
         <ButtonContainer>
-            <IconTextButton icon="icon-back.svg" title="Back" on:click={() => openScreen("title")}/>
+            <IconTextButton title="Back" on:click={() => openScreen("title")}/>
         </ButtonContainer>
     </BottomButtonWrapper>
 </Menu>

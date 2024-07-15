@@ -3,6 +3,8 @@
     import ButtonContainer from "../common/buttons/ButtonContainer.svelte";
     import IconTextButton from "../common/buttons/IconTextButton.svelte";
     import IconButton from "../common/buttons/IconButton.svelte";
+    import Account from "../common/header/Account.svelte";
+    import {fade} from "svelte/transition";
     import {
         browse,
         exitClient,
@@ -46,10 +48,19 @@
             }, 750);
         }
     }
+
+    function currentTime(): string {
+        const now = new Date();
+        const hours = now.getHours();
+        const minutes = now.getMinutes();
+            return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
+}
 </script>
 
 <Menu>
     <div class="content">
+        <div class="clock" transition:fly|global={{duration: 500, y: -100}}>{currentTime()}</div>
+        <div class="account" transition:fade|global={{duration: 500}}><Account/></div>
         <div class="main-buttons">
             {#if regularButtonsShown}
                 <MainButton title="Singleplayer" icon="singleplayer" index={0}
@@ -94,6 +105,25 @@
 
 <style>
 
+    .clock {
+        font-family: inter;
+        color: white;
+        opacity: 0.8;
+        font-size: 250px;
+        font-weight: 800;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+
+    .account {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 50px;
+    }
+
     .content {
         flex: 1;
         display: grid;
@@ -111,7 +141,7 @@
         grid-area: a;
         position: absolute;
         bottom: 25px;
-        left: 51%;
+        left: 50.5%;
         transform: translateX(-50%);
     }
 

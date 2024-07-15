@@ -43,7 +43,6 @@
   font-family: sf-pro;
   font-weight: normal;
   margin-right: 25px;
-  border-radius: 50%;
   scale: 70%;
 
   &:hover {

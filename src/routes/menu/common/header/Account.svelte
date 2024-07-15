@@ -57,7 +57,6 @@
     grid-template-columns: max-content 1fr max-content;
     font-family: sf-pro;
     margin-top: -210px;
-  
   }
 
   .avatar {
@@ -69,10 +68,10 @@
   }
 
   .username {
-    padding-top: 20px;
+    padding-top: 18px;
     font-weight: 600;
-    color: $text-color;
-    font-size: 20px;
+    color: white;
+    font-size: 22px;
     grid-area: b;
     align-self: flex-end;
     margin-right: 7px;

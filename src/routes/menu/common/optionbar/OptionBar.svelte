@@ -19,5 +19,6 @@
       margin-bottom: 25px;
       border: solid 1px $border-thing;
       font-family: sf-pro;
+      margin-top: -60px;
     }
 </style>
