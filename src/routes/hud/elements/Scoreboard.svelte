@@ -3,7 +3,8 @@
     import type {PlayerData, Scoreboard} from "../../../integration/types";
     import TextComponent from "../../menu/common/TextComponent.svelte";
     import type {ClientPlayerDataEvent} from "../../../integration/events";
-    import {fade} from "svelte/transition";
+    import {fly} from "svelte/transition";
+    import {backInOut} from "svelte/easing";
 
     let scoreboard: Scoreboard | null = null;
 
@@ -14,7 +15,7 @@
 </script>
 
 {#if scoreboard}
-    <div class="scoreboard"> 
+    <div class="scoreboard"  transition:fly|global={{duration: 500, x: -50, easing: backInOut}}> 
         {#if scoreboard.header}
             <div class="header">
                 <TextComponent fontSize={14} allowPreformatting={true} textComponent={scoreboard.header}/>

@@ -4,7 +4,6 @@
     import {getMinecraftKeybinds} from "../../../../integration/rest";
     import type {MinecraftKeybind} from "../../../../integration/types";
     import {listen} from "../../../../integration/ws";
-    import {fade} from "svelte/transition";
 
     let keyForward: MinecraftKeybind | undefined;
     let keyBack: MinecraftKeybind | undefined;

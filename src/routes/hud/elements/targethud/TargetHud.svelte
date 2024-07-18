@@ -2,11 +2,12 @@
     import {listen} from "../../../../integration/ws.js";
     import type {PlayerData} from "../../../../integration/types";
     import {REST_BASE} from "../../../../integration/host";
-    import {fade} from "svelte/transition";
+    import {scale} from "svelte/transition";
     import type {TargetChangeEvent} from "../../../../integration/events";
     import type {ClientPlayerDataEvent} from "../../../../integration/events";
     import {onMount} from "svelte";
     import {getPlayerData} from "../../../../integration/rest";
+    import {backInOut} from "svelte/easing";
 
     let target: PlayerData | null = null;
     let visible = true;
@@ -51,7 +52,7 @@
 </script>
 
 {#if visible && target != null}
-    <div class="targethud" transition:fade|global={{duration: 200}}>
+    <div class="targethud" transition:scale={{duration: 500, easing: backInOut}}>
         <div class="main-wrapper">
             <div class="avatar">
                 <img src="{REST_BASE}/api/v1/client/resource/skin?uuid={target.uuid}" alt="avatar" />

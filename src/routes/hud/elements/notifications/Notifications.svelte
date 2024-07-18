@@ -4,6 +4,7 @@
     import {fly} from "svelte/transition";
     import Notification from "./Notification.svelte";
     import type {NotificationEvent} from "../../../../integration/events";
+    import { backInOut } from "svelte/easing";
 
     interface TNotification {
         animationKey: number;
@@ -50,9 +51,9 @@
 <div class="notifications">
     {#each notifications as {title, message, severity, animationKey} (animationKey)}
         <div
-                animate:flip={{ duration: 150 }}
-                in:fly={{ x: -30, duration: 150 }}
-                out:fly={{ x: -30, duration: 150 }}
+                animate:flip={{duration: 150}}
+                in:fly={{duration: 500, x: -50, easing: backInOut}}
+                out:fly|global={{duration: 500, x: -50, easing: backInOut}}
     > 
             <Notification {title} {message} {severity}/>
         </div>

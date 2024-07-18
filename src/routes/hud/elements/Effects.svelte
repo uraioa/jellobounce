@@ -2,7 +2,8 @@
     import {listen} from "../../../integration/ws";
     import type {ClientPlayerDataEvent} from "../../../integration/events";
     import type {StatusEffect} from "../../../integration/types";
-    import {fade} from "svelte/transition";
+    import {fly} from "svelte/transition";
+    import {backInOut} from "svelte/easing";
 
     let effects: StatusEffect[] = [];
 
@@ -17,7 +18,7 @@
 
 <div class="effects">
     {#each effects as e}
-        <div class="effect" transition:fade|global={{duration: 200}}>
+        <div class="effect" transition:fly={{duration: 700, y: 50, easing: backInOut}}>
             <span class="name" style="color: {'#' + e.color.toString(16)}">{e.localizedName} {e.amplifier + 1}</span>
             <span class="duration">{formatTime(e.duration)}</span>
         </div>

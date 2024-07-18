@@ -4,9 +4,10 @@
     import type {PlayerData, TextComponent as TTExtComponent} from "../../../../integration/types";
     import {onMount} from "svelte";
     import {getPlayerData} from "../../../../integration/rest";
-    import {fade} from "svelte/transition";
+    import {fade, fly} from "svelte/transition";
     import TextComponent from "../../../menu/common/TextComponent.svelte";
     import type {ClientPlayerDataEvent, OverlayMessageEvent} from "../../../../integration/events";
+    import {backInOut} from "svelte/easing";
 
     let lastSlot = 0;
     let currentSlot = 0;
@@ -64,7 +65,7 @@
 </script>
 
 {#if playerData && playerData.gameMode !== "spectator"}
-    <div class="hotbar">
+    <div class="hotbar" transition:fly={{duration: 700, y: 50, easing: backInOut}}>
         {#if overlayMessage !== null}
             <div class="overlay-message" transition:fade|global={{duration: 200}}
                  style="max-width: {slotsElement?.offsetWidth ?? 0}px">
@@ -82,7 +83,7 @@
                     <Status
                             max={20}
                             value={playerData.armor}
-                            color="#48484899"
+                            color="#35353599"
                             alignRight={false}
                             icon="shield"
                     />
@@ -94,7 +95,7 @@
                     <Status
                             max={playerData.maxAir}
                             value={playerData.air}
-                            color="#48484899"
+                            color="#35353599"
                             alignRight={true}
                     />
                 {:else}
@@ -108,7 +109,7 @@
                         <Status
                                 max={maxAbsorption}
                                 value={playerData.absorption}
-                                color="#48484899"
+                                color="#35353599"
                                 alignRight={false}
                                 icon="heart2"
                         />
@@ -120,14 +121,14 @@
                     <Status
                             max={playerData.maxHealth}
                             value={playerData.health}
-                            color="#48484899"
+                            color="#35353599"
                             alignRight={false}
                             icon="heart"
                     />
                     <Status
                             max={20}
                             value={playerData.food}
-                            color="#48484899"
+                            color="#35353599"
                             alignRight={true}
                             icon="food"
                     />
@@ -136,7 +137,7 @@
             {#if playerData.experienceLevel > 0}
                 <Status
                         max={100} value={playerData.experienceProgress * 100}
-                        color="#3b3b3b99"
+                        color="#3b3b3b"
                         alignRight={false}
                         label={playerData.experienceLevel.toString()}
                 />
@@ -159,7 +160,7 @@
         </div>
 
         {#if playerData?.offHandStack.identifier !== "minecraft:air"}
-            <div class="offhand-slot" transition:fade|global={{duration: 200}}></div>
+            <div class="offhand-slot" transition:fade|global={{duration: 150}}></div>
         {/if}
     </div>
 {/if}
@@ -204,9 +205,10 @@
       padding-left: 10px;
       position: absolute;
       border-radius: 12px;
-      transition: ease left 0.1s;
-      border: solid 1px $accent-color;
+      transition: ease 0.15s;
       box-shadow: 0px 0px 10px rgba($shadow-color, 0.5);
+      background-color: rgba($background-color, 0.2);
+      scale: 95%;
     }
 
     .slots {

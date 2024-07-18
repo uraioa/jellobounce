@@ -34,7 +34,7 @@
     border-radius: 12px;
     font-size: 17px;
     font-weight: 500;
-    transition: ease background-color .3s;
+    transition: ease scale 0.1s, ease background-color 0.2s;
     position: relative;
     text-align: center;
     font-family: sf-pro;

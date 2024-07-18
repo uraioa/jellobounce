@@ -46,7 +46,7 @@
 .progress {
   position: relative;
   border-radius: 12px;
-  background-color: rgba(black, $transparency);
+  background-color: rgba($background-color, 0.4);
   box-shadow: 0px 0px 10px rgba($shadow-color, 0.5);
   border: solid 1px $border-thing;
 

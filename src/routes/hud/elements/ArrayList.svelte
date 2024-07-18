@@ -7,6 +7,7 @@
     import {flip} from "svelte/animate";
     import {fly} from "svelte/transition";
     import {convertToSpacedString, spaceSeperatedNames} from "../../../theme/theme_config";
+    import {backOut} from "svelte/easing";
 
     let enabledModules: Module[] = [];
 
@@ -39,7 +40,7 @@
 
 <div class="arraylist">
     {#each enabledModules as { name } (name)}
-        <div class="module" animate:flip={{ duration: 200 }} in:fly={{ x: 50, duration: 200 }} out:fly={{ x: 50, duration: 200 }}>
+        <div class="module" animate:flip={{duration: 200}} in:fly={{x: 50, duration: 200}} out:fly={{x: 50, duration: 200}}>
             {$spaceSeperatedNames ? convertToSpacedString(name) : name}
         </div>
     {/each}
