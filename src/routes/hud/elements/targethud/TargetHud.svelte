@@ -4,11 +4,35 @@
     import {REST_BASE} from "../../../../integration/host";
     import {fade} from "svelte/transition";
     import type {TargetChangeEvent} from "../../../../integration/events";
+    import type {ClientPlayerDataEvent} from "../../../../integration/events";
+    import {onMount} from "svelte";
+    import {getPlayerData} from "../../../../integration/rest";
 
     let target: PlayerData | null = null;
     let visible = true;
 
+    let playerData: PlayerData | null = null;
+    let maxAbsorption = 0;
+
     let hideTimeout: number;
+
+    function updatePlayerData(s: PlayerData) {
+        playerData = s;
+        if (playerData.absorption <= 0) {
+            maxAbsorption = 0;
+        }
+        if (playerData.absorption > maxAbsorption) {
+            maxAbsorption = playerData.absorption;
+        }
+    }
+
+    listen("clientPlayerData", (event: ClientPlayerDataEvent) => {
+        updatePlayerData(event.playerData);
+    });
+
+    onMount(async () => {
+        updatePlayerData(await getPlayerData());
+    });
 
     function startHideTimeout() {
         hideTimeout = setTimeout(() => {
@@ -34,6 +58,18 @@
             </div>
     
             <div class="name">{target.username}</div>
+            <div class="wl">
+                {#if playerData !== null && playerData.health !== null}
+                    {#if (playerData.health + playerData.absorption) > (target.actualHealth + target.absorption)}
+                        <div class="winning">Winning</div>
+                        {:else if (playerData.health + playerData.absorption) < (target.actualHealth + target.absorption)}
+                        <div class="losing">Losing</div>
+                        {:else}
+                        <div class="draw">Draw</div>
+                    {/if}
+                {/if}
+            </div>
+
             <div class="health-stats">
                 <div class="stat">
                     <div class="value">Health: {Math.floor(target.actualHealth + target.absorption)}</div>
@@ -69,20 +105,44 @@
     .main-wrapper {
         display: grid;
         grid-template-areas:
-            "a b d"
-            "f c e";
+            "a ."
+            ". b";
         padding: 7px;
     }
 
     .name {
         grid-area: a;
-        color: white;
+        color: $text-color;
         font-weight: 500;
         align-self: flex-start;
         padding-left: 56px;
         padding-top: 4px;
         font-size: 20px;
         padding-right: 5px;
+    }
+
+    .wl {
+        grid-area: b;
+        position: absolute;
+        right: 11px;
+        bottom: 11px;
+        padding-top: 9px;
+        font-size: 16px;
+
+        .winning {
+            color: $targethud-winning;
+            filter: grayscale(50%);
+        }
+
+        .losing {
+            color: $targethud-losing;
+            filter: grayscale(50%);
+        }
+
+        .draw {
+            color: $targethud-draw;
+            filter: grayscale(50%);
+        }
     }
 
     .health-stats {
@@ -117,6 +177,7 @@
         overflow: hidden;
         padding-left: 11px;
         padding-top: 11px;
+        box-shadow: 0px 0px 10px rgba($shadow-color, 0.5);
 
         img {
             position: absolute;
