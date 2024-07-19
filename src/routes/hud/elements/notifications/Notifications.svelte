@@ -40,7 +40,7 @@
         
         setTimeout(() => {
             notifications = notifications.filter((n) => n.id !== id);
-        }, 3000);
+        }, 700);
     }
 
     listen("notification", (e: NotificationEvent) => {
