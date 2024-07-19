@@ -42,7 +42,6 @@
         width: 7050px;
         height: 4050px;
         z-index: -3;
-        animation: fade 5s linear;
     }
 
     .shaderfix {

@@ -59,20 +59,20 @@
         background-color: rgba($background-color, $transparency);
         color: $text-color;
         font-size: 16px;
-        font-family: urbanist-variable;
+        font-family: sf-pro;
         padding: 5px 8px;
         width: max-content;
         font-weight: 500;
         margin-left: auto;
-        box-shadow: -8px 0px 10px rgba(black, 0.27), 8px 0px 10px rgba(black, 0.27);
+        box-shadow: -5px 0px 10px rgba(black, 0.27), 5px 0px 10px rgba(black, 0.27);
 
     }
 
     .module:first-child {
-        box-shadow: 0px -10px 10px rgba(black, 0.17), -10px 0px 10px rgba(black, 0.17), 10px 0px 10px rgba(black, 0.17);
+        box-shadow: 0px -5px 10px rgba(black, 0.17), -5px 0px 10px rgba(black, 0.17), 5px 0px 10px rgba(black, 0.17);
     }
 
     .module:last-child {
-        box-shadow: 0px 10px 10px rgba(black, 0.17), -10px 0px 10px rgba(black, 0.17), 10px 0px 10px rgba(black, 0.17);
+        box-shadow: 0px 5px 10px rgba(black, 0.17), -5px 0px 10px rgba(black, 0.17), 5px 0px 10px rgba(black, 0.17);
     }
 </style>
