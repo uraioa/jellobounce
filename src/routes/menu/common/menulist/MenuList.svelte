@@ -32,7 +32,7 @@
     }
 </script>
 
-<div class="menu-list" transition:fly|global={{duration: 1000, x: -100, easing:backInOut}}>
+<div class="menu-list" transition:fly|global={{duration: 1000, x: -100}}>
     {#if sortable && elementCount > -1}
         <SortableList class="menu-list-items" onSort={handleChange} forceFallback={true} animation={150}>
             <slot/>
@@ -43,7 +43,6 @@
         </div>
     {/if}
 </div>
-<div class="background" transition:fade={{duration: 500}}></div>
 
 <style lang="scss">
   @import "../../../../colors";
