@@ -1,15 +1,20 @@
 <script lang="ts">
     import {createEventDispatcher} from "svelte";
+    import {backIn} from "svelte/easing";
+    import {fly} from "svelte/transition"
 
     export let title: string;
     export let disabled = false;
+    export let index: number;
 
     const dispatch = createEventDispatcher();
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-static-element-interactions -->
-<button class="icon-text-button" on:click={() => dispatch("click")} {disabled}>
+<button class="icon-text-button" on:click={() => dispatch("click")} {disabled}
+      in:fly|global={{duration: 350, y: 100, delay: index * 15, easing: backIn}}
+      out:fly|global={{duration: 350, y: 100, delay: index * 15, easing: backIn}}>
     <div class="icon">
     </div>
     <div class="title">{title}</div>

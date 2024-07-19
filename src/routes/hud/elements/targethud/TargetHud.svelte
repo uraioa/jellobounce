@@ -120,6 +120,7 @@
         padding-top: 4px;
         font-size: 20px;
         padding-right: 5px;
+        text-shadow: 0px 0px 10px rgba($shadow-color, 0.5);
     }
 
     .wl {
@@ -129,6 +130,7 @@
         bottom: 11px;
         padding-top: 9px;
         font-size: 16px;
+        text-shadow: 0px 0px 10px rgba($shadow-color, 0.5);
 
         .winning {
             color: $targethud-winning;
@@ -152,6 +154,7 @@
         left: 64px;
         bottom: 11px;
         padding-top: 9px;
+        text-shadow: 0px 0px 10px rgba($shadow-color, 0.5);
 
         .stat {
             .value {

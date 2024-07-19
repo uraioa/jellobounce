@@ -71,34 +71,17 @@
                 </MainButton>
                 <MainButton title="Configure" icon="options" on:click={toggleButtons} index={2}/>
             {:else if clientButtonsShown}
-                <MainButton title="Proxies" icon="proxymanager" on:click={() => openScreen("proxymanager")}
+                <MainButton title="Exit" icon="shutdown" on:click={exitClient}
+                            index={-1}/>
+                <MainButton title="Toggle Shader" icon="pen-2" on:click={toggleBackgroundShaderEnabled}
                             index={0}/>
-                <MainButton title="ClickGUI" icon="clickgui" on:click={() => openScreen("clickgui")} index={1}/>
-                    <MainButton title="Options" icon="options" on:click={() => openScreen("options")} index={2}/>
+                <MainButton title="Proxies" icon="proxymanager" on:click={() => openScreen("proxymanager")}
+                            index={1}/>
+                <MainButton title="ClickGUI" icon="clickgui" on:click={() => openScreen("clickgui")} index={2}/>
+                    <MainButton title="Options" icon="options" on:click={() => openScreen("options")} index={3}/>
                 <!-- <MainButton title="Scripts" icon="scripts" index={2}/> -->
-                <MainButton title="Back" icon="back-large" on:click={toggleButtons} index={3}/>
+                <MainButton title="Back" icon="back-large" on:click={toggleButtons} index={4}/>
             {/if}
-        </div>
-
-        <div class="additional-buttons" transition:fly|global={{duration: 500, y: 100}}>
-            <ButtonContainer>
-                <IconTextButton title="Exit" on:click={exitClient}/>
-                <IconTextButton title="Toggle Shader"
-                                on:click={toggleBackgroundShaderEnabled}/>
-            </ButtonContainer>
-        </div>
-
-        <div class="social-buttons" transition:fly|global={{duration: 500, y: 100}}>
-            <ButtonContainer>
-                <IconButton title="Forum" icon="nodebb" on:click={() => browse("MAINTAINER_FORUM")}/>
-                <IconButton title="GitHub" icon="github" on:click={() => browse("MAINTAINER_GITHUB")}/>
-                <IconButton title="Guilded" icon="guilded" on:click={() => browse("MAINTAINER_GUILDED")}/>
-                <IconButton title="Discord" icon="discord" on:click={() => browse("MAINTAINER_DISCORD")}/>
-                <IconButton title="Twitter" icon="twitter" on:click={() => browse("MAINTAINER_TWITTER")}/>
-                <IconButton title="YouTube" icon="youtube" on:click={() => browse("MAINTAINER_YOUTUBE")}/>
-                <IconTextButton title="liquidbounce.net"
-                                on:click={() => browse("CLIENT_WEBSITE")}/>
-            </ButtonContainer>
         </div>
     </div>
 </Menu>
@@ -143,13 +126,5 @@
         bottom: 25px;
         left: 50.5%;
         transform: translateX(-50%);
-    }
-
-    .additional-buttons {
-        grid-area: b;
-    }
-
-    .social-buttons {
-        grid-area: c;
     }
 </style>

@@ -195,7 +195,6 @@
     background-color: rgba($background-color, $transparency);
     position: relative;
     border-radius: 12px;
-    overflow: hidden;
     box-shadow: 0px 0px 10px rgba($shadow-color, 0.5);
     border: solid 1px $border-thing;
 
@@ -204,7 +203,7 @@
       width: 45px;
       padding-left: 10px;
       position: absolute;
-      border-radius: 12px;
+      border-radius: 6px;
       transition: ease 0.15s;
       box-shadow: 0px 0px 10px rgba($shadow-color, 0.5);
       background-color: rgba($background-color, 0.2);
@@ -230,6 +229,7 @@
     bottom: 0;
     left: -65px;
     box-shadow: 0px 0px 10px rgba($shadow-color, 0.5);
+    border: solid 1px $border-thing;
   }
 
   .item-name {

@@ -40,6 +40,7 @@
     font-family: sf-pro;
     box-shadow: 0px 0px 10px rgba($shadow-color, 0.5);
     border: solid 1px $border-thing;
+    text-shadow: 0px 0px 10px rgba($shadow-color, 0.5);
 
     &.active {
       background-color: rgba($accent-color, 0.7);
