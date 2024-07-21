@@ -83,7 +83,7 @@
                     <Status
                             max={20}
                             value={playerData.armor}
-                            color="#3b3b3b99"
+                            color="#555555"
                             alignRight={false}
                             icon="shield"
                     />
@@ -95,7 +95,7 @@
                     <Status
                             max={playerData.maxAir}
                             value={playerData.air}
-                            color="#3b3b3b99"
+                            color="#555555"
                             alignRight={true}
                     />
                 {:else}
@@ -109,7 +109,7 @@
                         <Status
                                 max={maxAbsorption}
                                 value={playerData.absorption}
-                                color="#3b3b3b99"
+                                color="#555555"
                                 alignRight={false}
                                 icon="heart2"
                         />
@@ -121,14 +121,14 @@
                     <Status
                             max={playerData.maxHealth}
                             value={playerData.health}
-                            color="#3b3b3b99"
+                            color="#444444"
                             alignRight={false}
                             icon="heart"
                     />
                     <Status
                             max={20}
                             value={playerData.food}
-                            color="#3b3b3b99"
+                            color="#444444"
                             alignRight={true}
                             icon="food"
                     />
@@ -137,7 +137,7 @@
             {#if playerData.experienceLevel > 0}
                 <Status
                         max={100} value={playerData.experienceProgress * 100}
-                        color="#3b3b3b99"
+                        color="#333333"
                         alignRight={false}
                         label={playerData.experienceLevel.toString()}
                 />

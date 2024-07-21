@@ -32,7 +32,7 @@
     }
 </script>
 
-<div class="menu-list" transition:fly|global={{duration: 1000, x: -100}}>
+<div class="menu-list" transition:fly|global={{duration: 500, x: 1000}}>
     {#if sortable && elementCount > -1}
         <SortableList class="menu-list-items" onSort={handleChange} forceFallback={true} animation={150}>
             <slot/>
@@ -54,5 +54,6 @@
     margin-bottom: -125px;
     position: relative;
     border: solid 1px $border-thing;
+    z-index: 1;
   }
 </style>

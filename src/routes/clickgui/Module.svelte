@@ -128,6 +128,10 @@
       position: relative;
       padding: 10px;
       font-family: sf-pro;
+      align-items: center;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
 
       &.highlight::before {
         content: "";
@@ -140,11 +144,12 @@
       }
 
       &:hover {
-        background-color: rgba($background-color, 0.3);
+        background: rgba($background-color, 0.2);
         color: gray;
       }
 
       &.enabled {
+        background: rgba($background-color, 0.2);
         color: white;
         text-shadow: 0px 0px 20px gray;
       }

@@ -1,8 +1,5 @@
 <script lang="ts">
     import MainButton from "./buttons/MainButton.svelte";
-    import ButtonContainer from "../common/buttons/ButtonContainer.svelte";
-    import IconTextButton from "../common/buttons/IconTextButton.svelte";
-    import IconButton from "../common/buttons/IconButton.svelte";
     import Account from "../common/header/Account.svelte";
     import {fade} from "svelte/transition";
     import {
@@ -72,15 +69,15 @@
                 <MainButton title="Configure" icon="options" on:click={toggleButtons} index={2}/>
             {:else if clientButtonsShown}
                 <MainButton title="Exit" icon="shutdown" on:click={exitClient}
-                            index={-1}/>
-                <MainButton title="Toggle Shader" icon="pen-2" on:click={toggleBackgroundShaderEnabled}
                             index={0}/>
-                <MainButton title="Proxies" icon="proxymanager" on:click={() => openScreen("proxymanager")}
+                <MainButton title="Toggle Shader" icon="pen-2" on:click={toggleBackgroundShaderEnabled}
                             index={1}/>
-                <MainButton title="ClickGUI" icon="clickgui" on:click={() => openScreen("clickgui")} index={2}/>
-                    <MainButton title="Options" icon="options" on:click={() => openScreen("options")} index={3}/>
+                <MainButton title="Proxies" icon="proxymanager" on:click={() => openScreen("proxymanager")}
+                            index={2}/>
+                <MainButton title="ClickGUI" icon="clickgui" on:click={() => openScreen("clickgui")} index={3}/>
+                    <MainButton title="Options" icon="options" on:click={() => openScreen("options")} index={4}/>
                 <!-- <MainButton title="Scripts" icon="scripts" index={2}/> -->
-                <MainButton title="Back" icon="back-large" on:click={toggleButtons} index={4}/>
+                <MainButton title="Back" icon="back-large" on:click={toggleButtons} index={5}/>
             {/if}
         </div>
     </div>

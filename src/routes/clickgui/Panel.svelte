@@ -208,7 +208,8 @@
     overflow: hidden;
     box-shadow: 0 0 10px rgba($background-color, 0.4);
     will-change: transform;
-    box-shadow: inset 0 125px 100px -100px rgba(black, 0.8), 0px 0px 10px rgba(black, 0.5);
+    //box-shadow: inset 0 125px 100px -100px rgba(black, 0.8), 0px 0px 10px rgba(black, 0.5);
+    align-items: center;
   }
 
   .title {

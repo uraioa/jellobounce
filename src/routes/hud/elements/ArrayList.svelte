@@ -58,11 +58,11 @@
     .module {
         background-color: rgba($background-color, $transparency);
         color: $text-color;
-        font-size: 16px;
+        font-size: 15px;
         font-family: sf-pro;
         padding: 5px 8px;
         width: max-content;
-        font-weight: 500;
+        font-weight: 400;
         margin-left: auto;
         box-shadow: -5px 0px 10px rgba(black, 0.27), 5px 0px 10px rgba(black, 0.27);
 
