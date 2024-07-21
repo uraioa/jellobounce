@@ -1,18 +1,17 @@
 # jellobounce
 
-a macos themed liquidbounce theme
-(background opacity and blur are off due to limitations)
+a macos inspired liquidbounce theme
 
 ## preview
 
 title screen:
-![image](https://github.com/user-attachments/assets/3c852b7c-2606-451c-a2ba-c52efeb9b55e)
+![image](https://github.com/user-attachments/assets/27871860-5bf6-4157-85a9-96f6f491088a)
 
 clickgui:
-![image](https://github.com/user-attachments/assets/87d2bf58-4674-422c-98ae-7bf8b3774e6c)
+![image](https://github.com/user-attachments/assets/2395b9ca-f381-49fd-b9b9-92c17b404654)
 
 ingame hud:
-![image](https://github.com/user-attachments/assets/88bd8ceb-73a7-4c37-ab29-7c32b7222a35)
+![image](https://github.com/user-attachments/assets/43901751-22b3-42f5-b699-72402e287884)
 
 
 ## how to install manually
