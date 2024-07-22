@@ -66,7 +66,7 @@
                 <MainButton title="Multiplayer" icon="multiplayer" let:parentHovered
                             on:click={() => openScreen("multiplayer")} index={1}>
                 </MainButton>
-                <MainButton title="Configure" icon="options" on:click={toggleButtons} index={2}/>
+                <MainButton title="Other" icon="other" on:click={toggleButtons} index={2}/>
             {:else if clientButtonsShown}
                 <MainButton title="Exit" icon="shutdown" on:click={exitClient}
                             index={0}/>

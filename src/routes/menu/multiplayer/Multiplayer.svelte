@@ -202,13 +202,12 @@
 
     <BottomButtonWrapper>
         <ButtonContainer>
-            <IconTextButton title="Add" on:click={() => addServerModalVisible = true}/>
-            <IconTextButton title="Direct" on:click={() => directConnectModalVisible = true}/>
-            <IconTextButton title="Refresh" on:click={refreshServers}/>
-        </ButtonContainer>
-
-        <ButtonContainer>
-            <IconTextButton title="Back" on:click={() => openScreen("title")}/>
+            <IconTextButton title="Add" on:click={() => addServerModalVisible = true}
+                index={0}/>
+            <IconTextButton title="Direct" on:click={() => directConnectModalVisible = true}
+                index={1}/>
+            <IconTextButton title="Refresh" on:click={refreshServers}
+                index={2}/>
         </ButtonContainer>
     </BottomButtonWrapper>
 </Menu>
