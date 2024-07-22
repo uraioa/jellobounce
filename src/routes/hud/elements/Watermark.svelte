@@ -39,8 +39,8 @@
         top: -15px;
         left: -15px;
         background-color: black;
-        width: 7050px;
-        height: 4050px;
+        width: 100vw;
+        height: 100vw;
         z-index: -3;
     }
 
@@ -49,8 +49,8 @@
         left: -15px;
         position: absolute;
         background-color: rgba(black, 0.1);
-        width: 7050px;
-        height: 4050px;
+        width: 100vw;
+        height: 100vw;
         z-index: -2;
     }
 </style>
