@@ -28,9 +28,10 @@
 
   .progress {
     z-index: 1;
-    margin-top: 30%;
+    position: fixed;
+    top: 60%;
     left: 50%;
-    translate: translateX(-50%);
+    transform: translate(-50%, -50%);
 
     .inner, .outer {
       height: 3px;
