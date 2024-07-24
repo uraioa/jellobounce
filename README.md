@@ -1,4 +1,6 @@
 # jellobounce
+![jellobounce350px](https://github.com/user-attachments/assets/9466accd-5636-4bca-8118-2e36122d029d)
+
 a liquidbounce nextgen theme inspired by macos
 
 ## preview
