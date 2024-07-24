@@ -30,7 +30,7 @@ jobs:
     - run: npm run build --if-present
     
     - name: Create a Release in a GitHub Action
-    - uses: comnoco/create-release-action@v2.0.5
+      uses: comnoco/create-release-action@v2.0.5
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
