@@ -30,12 +30,9 @@ jobs:
     - run: npm run build --if-present
     
     - name: Create a Release in a GitHub Action
-      uses: comnoco/create-release-action@v2.0.5
-      
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        
+    - uses: "0xDylan/action-auto-releases-n20@v1.1"
       with:
-        tag_name: ${{ github.run_number }}
-        release_name: ${{ github.ref }}
-        prerelease: true
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "pre"
+          prerelease: true
+          title: "prerelease"
