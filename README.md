@@ -1,6 +1,4 @@
-# jellobounce
 ![jellobounce-wide](https://github.com/user-attachments/assets/52fc40e9-cb4f-4860-849c-7b7fa7988f01)
-
 a liquidbounce nextgen theme inspired by macos
 
 ## preview
