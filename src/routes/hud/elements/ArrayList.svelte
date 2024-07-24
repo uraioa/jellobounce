@@ -7,7 +7,6 @@
     import {flip} from "svelte/animate";
     import {fly} from "svelte/transition";
     import {convertToSpacedString, spaceSeperatedNames} from "../../../theme/theme_config";
-    import {backOut} from "svelte/easing";
 
     let enabledModules: Module[] = [];
 
