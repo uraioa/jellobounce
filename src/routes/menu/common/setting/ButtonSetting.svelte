@@ -27,35 +27,35 @@
 
   .button-setting {
     border: none;
-    background-color: rgba($accent-color, 0.7);
+    background-color: rgba($background-color, $transparency);
     color: $text-color;
     font-family: "sf-pro", sans-serif;
     padding: 15px;
     border-radius: 12px;
     font-size: 20px;
-    transition: ease background-color .15s, ease opacity .15s;
-    box-shadow: 0px 0px 10px rgba($shadow-color, 0.5);
+    transition: ease background-color .2s, ease opacity .15s;
     font-weight: 600;
+    border: solid 1px $border-thing;
 
     &.inset {
       margin: 0 30px;
     }
 
     &.secondary {
-      background-color: rgba($background-color, .36);
+      background-color: rgba($background-color, .1);
     }
 
     &:not([disabled]):hover {
-      background-color: darken(desaturate($accent-color, 30%), 10%);
+      background-color: darken(desaturate($accent-color, 0.1), 0.1);
       cursor: pointer;
 
       &.secondary {
-        background-color: darken(desaturate($background-color, 30%), 10%);
+        background-color: darken(desaturate($background-color, 0.1), 0.1);
       }
     }
 
     &[disabled] {
-      opacity: .6;
+      opacity: .55;
     }
   }
 </style>
