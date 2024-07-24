@@ -70,7 +70,7 @@
     border-radius: 12px;
     transition: ease .2s;
     box-shadow: 0px 0px 10px rgba($shadow-color, 0.5);
-    font-family: sf-pro;
+    font-family: "sf-pro";
     z-index: 1;
 
     .title {

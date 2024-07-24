@@ -64,7 +64,7 @@
     padding-right: 10px;
     min-width: 350px;
     border: solid 1px $border-thing;
-    font-family: sf-pro;
+    font-family: "sf-pro";
 
     .title {
       color: $text-color;

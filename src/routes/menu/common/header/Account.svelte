@@ -55,7 +55,7 @@
         "a b c"
         "a d e";
     grid-template-columns: max-content 1fr max-content;
-    font-family: sf-pro;
+    font-family: "sf-pro";
     margin-top: -210px;
   }
 

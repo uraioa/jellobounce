@@ -39,7 +39,7 @@
   grid-template-columns: max-content 1fr max-content;
   align-items: center;
   cursor: pointer;
-  font-family: sf-pro;
+  font-family: "sf-pro";
   font-weight: normal;
   margin-right: 25px;
   scale: 70%;

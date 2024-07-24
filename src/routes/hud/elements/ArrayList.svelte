@@ -16,8 +16,8 @@
             .filter((m) => m.enabled && !m.hidden)
             .sort(
                 (a, b) =>
-                    getTextWidth($spaceSeperatedNames ? convertToSpacedString(b.name) : b.name, "500 14px urbanist-variable") -
-                    getTextWidth($spaceSeperatedNames ? convertToSpacedString(a.name) : a.name, "500 14px urbanist-variable"),
+                    getTextWidth($spaceSeperatedNames ? convertToSpacedString(b.name) : b.name, "500 14px sf-pro") -
+                    getTextWidth($spaceSeperatedNames ? convertToSpacedString(a.name) : a.name, "500 14px sf-pro"),
             );
     }
 
@@ -59,7 +59,7 @@
         background-color: rgba($background-color, $transparency);
         color: $text-color;
         font-size: 15px;
-        font-family: sf-pro;
+        font-family: "sf-pro";
         padding: 5px 8px;
         width: max-content;
         font-weight: 400;

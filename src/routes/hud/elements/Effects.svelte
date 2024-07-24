@@ -37,7 +37,7 @@
     box-shadow: 0px 0px 10px rgba($shadow-color, 0.5);
     border-left: solid 1px $border-thing;
     border-right: solid 1px $border-thing;
-    font-family: sf-pro;
+    font-family: "sf-pro";
     text-shadow: 0px 0px 10px rgba($shadow-color, 0.5);
 
     .duration {

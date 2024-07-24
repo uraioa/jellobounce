@@ -45,7 +45,7 @@
     font-size: 14px;
     box-shadow: 0px 0px 10px rgba($shadow-color, 0.5);
     border: solid 1px $border-thing;
-    font-family: sf-pro;
+    font-family: "sf-pro";
   }
 
   .entries {

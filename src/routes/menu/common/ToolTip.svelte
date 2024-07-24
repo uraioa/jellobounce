@@ -41,7 +41,7 @@
     transform: translate(-50%, -45px);
     z-index: 1000;
     box-shadow: 0px 0px 10px rgba($shadow-color, 0.5);
-    font-family: sf-pro;
+    font-family: "sf-pro";
 
     &::after {
       content: "";

@@ -173,7 +173,7 @@
     //bottom: 15px;
     //left: 50%;
     //transform: translateX(-50%);
-    font-family: sf-pro;
+    font-family: "sf-pro";
   }
 
   .pair {

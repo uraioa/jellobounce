@@ -22,7 +22,7 @@
   .switch-setting {
     display: flex;
     align-items: center;
-    font-family: sf-pro;
+    font-family: "sf-pro";
   }
 
   .title {

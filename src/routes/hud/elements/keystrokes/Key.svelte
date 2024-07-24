@@ -37,7 +37,7 @@
     transition: ease scale 0.1s, ease background-color 0.2s;
     position: relative;
     text-align: center;
-    font-family: sf-pro;
+    font-family: "sf-pro";
     box-shadow: 0px 0px 10px rgba($shadow-color, 0.5);
     border: solid 1px $border-thing;
     text-shadow: 0px 0px 10px rgba($shadow-color, 0.5);
