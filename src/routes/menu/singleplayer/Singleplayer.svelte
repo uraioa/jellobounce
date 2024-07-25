@@ -108,8 +108,8 @@
 
     <BottomButtonWrapper>
         <ButtonContainer>
-            <IconTextButton title="Add" on:click={() => openScreen("create_world")}
-                index={0}/>
+            <IconTextButton title="Add" on:click={() => openScreen("create_world")}/>
+            <IconTextButton title="Back" on:click={() => openScreen("title")}/>
         </ButtonContainer>
     </BottomButtonWrapper>
 </Menu>

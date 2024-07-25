@@ -2,6 +2,7 @@
     import MainButton from "./buttons/MainButton.svelte";
     import Account from "../common/header/Account.svelte";
     import {fade} from "svelte/transition";
+    import {onDestroy} from 'svelte';
     import {
         browse,
         exitClient,
@@ -46,17 +47,27 @@
         }
     }
 
-    function currentTime(): string {
+    let currentTime: string;
+
+    function updateTime() {
         const now = new Date();
         const hours = now.getHours();
         const minutes = now.getMinutes();
-            return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
-}
+        currentTime = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
+    }
+
+    const interval = setInterval(updateTime, 10);
+
+    onDestroy(() => {
+        clearInterval(interval);
+    });
+
+    updateTime();
 </script>
 
 <Menu>
     <div class="content">
-        <div class="clock" transition:fly|global={{duration: 500, y: -100}}>{currentTime()}</div>
+        <div class="clock" transition:fly|global={{duration: 500, y: -100}}>{currentTime}</div>
         <div class="account" transition:fade|global={{duration: 500}}><Account/></div>
         <div class="main-buttons">
             {#if regularButtonsShown}
@@ -87,7 +98,7 @@
 
     .clock {
         font-family: inter;
-        color: white;
+        color: clock;
         opacity: 0.8;
         font-size: 250px;
         font-weight: 800;

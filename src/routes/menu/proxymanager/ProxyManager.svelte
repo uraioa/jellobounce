@@ -246,16 +246,13 @@
 
     <BottomButtonWrapper>
         <ButtonContainer>
-            <IconTextButton title="Add" on:click={() => addProxyModalVisible = true}
-                index={0}/>
-            <IconTextButton title="Add Clipboard" on:click={() => addProxyFromClipboard()}
-                index={1}/>
+            <IconTextButton title="Add" on:click={() => addProxyModalVisible = true}/>
+            <IconTextButton title="Add Clipboard" on:click={() => addProxyFromClipboard()}/>
             <IconTextButton disabled={renderedProxies.length === 0} title="Random"
-                            on:click={connectToRandomProxy}
-                            index={2}/>
+                            on:click={connectToRandomProxy}/>
             <IconTextButton disabled={!isConnectedToProxy} title="Disconnect"
-                            on:click={disconnectFromProxy}
-                            index={3}/>
+                            on:click={disconnectFromProxy}/>
+            <IconTextButton title="Back" on:click={() => openScreen("title")}/>
         </ButtonContainer>
     </BottomButtonWrapper>
 </Menu>

@@ -27,13 +27,13 @@
 
   .button-setting {
     border: none;
-    background-color: rgba($background-color, $transparency);
+    background-color: rgba($accent-color, 0.7);
     color: $text-color;
     font-family: "sf-pro", sans-serif;
     padding: 15px;
     border-radius: 12px;
     font-size: 20px;
-    transition: ease background-color .2s, ease opacity .15s;
+    transition: ease background-color .2s, ease opacity .2s;
     font-weight: 600;
     border: solid 1px $border-thing;
 
@@ -42,20 +42,20 @@
     }
 
     &.secondary {
-      background-color: rgba($background-color, .1);
+      background-color: rgba($background-color, .36);
     }
 
     &:not([disabled]):hover {
-      background-color: darken(desaturate($accent-color, 0.1), 0.1);
+      background-color: darken(desaturate($accent-color, 30%), 10%);
       cursor: pointer;
 
       &.secondary {
-        background-color: darken(desaturate($background-color, 0.1), 0.1);
+        background-color: darken(desaturate($background-color, 30%), 10%);
       }
     }
 
     &[disabled] {
-      opacity: .55;
+      opacity: .6;
     }
   }
 </style>
