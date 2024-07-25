@@ -1,5 +1,5 @@
 ![jellobounce-wide](https://github.com/user-attachments/assets/ddc890c9-82c1-47c8-b472-4d40234392e1)
-<center>a liquidbounce nextgen theme inspired by macos</center>
+<p align="center">a liquidbounce nextgen theme inspired by macos</p>
 
 ## preview
 
