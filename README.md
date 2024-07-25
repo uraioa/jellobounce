@@ -4,11 +4,8 @@
 ## preview
 
 ![image](https://github.com/user-attachments/assets/27871860-5bf6-4157-85a9-96f6f491088a)
-
 ![image](https://github.com/user-attachments/assets/2395b9ca-f381-49fd-b9b9-92c17b404654)
-
 ![image](https://github.com/user-attachments/assets/43901751-22b3-42f5-b699-72402e287884)
-
 
 ## how to install manually
 
