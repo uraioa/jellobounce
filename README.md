@@ -1,4 +1,4 @@
-![jellobounce-wide](https://github.com/user-attachments/assets/ddc890c9-82c1-47c8-b472-4d40234392e1)
+![logo](https://github.com/user-attachments/assets/1484fc10-b3e0-4dd1-b338-5a7aa97e7cdf)
 <div align="center">
 <p align="center">a liquidbounce nextgen theme inspired by macos
 </p>
