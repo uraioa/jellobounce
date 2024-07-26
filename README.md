@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-    [![Github Release Downloads](https://img.shields.io/github/downloads/larryngton/jellobounce/total?label=Downloads&style=flat-square)](https://github.com/larryngton/jellobounce/releases)
+    [![Github Release Downloads](https://img.shields.io/github/downloads/larryngton/jellobounce/total?label=Github%20Release%20Downloads&style=flat-square)](https://github.com/larryngton/jellobounce/releases)
 </p>
 
 ## preview
