@@ -5,9 +5,8 @@
     
 <p align="center">
     <img src="https://img.shields.io/badge/license-GPLV3-green" alt="License">
+    <img src="https://img.shields.io/github/downloads/larryngton/jellobounce/total?label=Downloads" alt="Downloads">
 </p>
-
-[![Github Release Downloads](https://img.shields.io/github/downloads/larryngton/jellobounce/total?label=Downloads&style=flat-square)](https://github.com/larryngton/jellobounce/releases)
 
 ## preview
 
