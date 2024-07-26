@@ -1,6 +1,7 @@
 ![jellobounce-wide](https://github.com/user-attachments/assets/ddc890c9-82c1-47c8-b472-4d40234392e1)
 <p align="center">a liquidbounce nextgen theme inspired by macos</p>
 
+[![Github Release Downloads](https://img.shields.io/github/downloads/larryngton/jellobounce/total?label=Downloads&style=flat-square)](https://github.com/larryngton/jellobounce/releases)
 
 ## preview
 
