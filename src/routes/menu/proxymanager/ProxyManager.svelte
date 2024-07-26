@@ -252,6 +252,9 @@
                             on:click={connectToRandomProxy}/>
             <IconTextButton disabled={!isConnectedToProxy} title="Disconnect"
                             on:click={disconnectFromProxy}/>
+        </ButtonContainer>
+
+        <ButtonContainer>
             <IconTextButton title="Back" on:click={() => openScreen("title")}/>
         </ButtonContainer>
     </BottomButtonWrapper>

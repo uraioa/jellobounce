@@ -205,6 +205,9 @@
             <IconTextButton title="Add" on:click={() => addServerModalVisible = true}/>
             <IconTextButton title="Direct" on:click={() => directConnectModalVisible = true}/>
             <IconTextButton title="Refresh" on:click={refreshServers}/>
+        </ButtonContainer>
+
+        <ButtonContainer>
             <IconTextButton title="Back" on:click={() => openScreen("title")}/>
         </ButtonContainer>
     </BottomButtonWrapper>

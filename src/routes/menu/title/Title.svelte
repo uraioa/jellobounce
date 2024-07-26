@@ -98,7 +98,7 @@
 
     .clock {
         font-family: inter;
-        color: clock;
+        color: white;
         opacity: 0.8;
         font-size: 250px;
         font-weight: 800;
