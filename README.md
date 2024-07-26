@@ -1,6 +1,8 @@
 ![jellobounce-wide](https://github.com/user-attachments/assets/ddc890c9-82c1-47c8-b472-4d40234392e1)
-<p align="center">
+<div align="center>
     a liquidbounce nextgen theme inspired by macos
+    
+<p align="center">
     <img src="https://img.shields.io/badge/license-GPLV3-green" alt="License">
 </p>
 
@@ -11,6 +13,7 @@
 ![image](https://github.com/user-attachments/assets/27871860-5bf6-4157-85a9-96f6f491088a)
 ![image](https://github.com/user-attachments/assets/2395b9ca-f381-49fd-b9b9-92c17b404654)
 ![image](https://github.com/user-attachments/assets/43901751-22b3-42f5-b699-72402e287884)
+</div>
 
 ## how to install manually
 
