@@ -134,17 +134,17 @@
 
         .winning {
             color: $targethud-winning;
-            filter: grayscale(50%);
+            filter: grayscale(70%);
         }
 
         .losing {
             color: $targethud-losing;
-            filter: grayscale(50%);
+            filter: grayscale(70%);
         }
 
         .draw {
             color: $targethud-draw;
-            filter: grayscale(50%);
+            filter: grayscale(70%);
         }
     }
 
