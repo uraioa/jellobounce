@@ -26,7 +26,7 @@ export type ModuleSetting =
     | TogglableSetting
     | ColorSetting
     | TextSetting
-    | TextArraySetting;
+    | TextArraySetting
 
 export interface BlocksSetting {
     valueType: string;
