@@ -7,7 +7,7 @@
     import {flip} from "svelte/animate";
     import {fly} from "svelte/transition";
     import {convertToSpacedString, spaceSeperatedNames} from "../../../theme/theme_config";
-    import {getPrefixAsync} from "../../../theme/arraylist";
+    import {getPrefix} from "../../../theme/arraylist";
 
     let enabledModules: Module[] = [];
     let prefixs = new Map();
@@ -17,11 +17,12 @@
         const visibleModules = modules.filter(m => m.enabled && !m.hidden);
 
         for (let module of visibleModules) {
-            if (!prefixs.has(module.name)) {
-                const prefix = await getPrefixAsync(module.name);
-                prefixs.set(module.name, prefix);
-            }
+        const updatePrefix = await getPrefix(module.name);
+        
+        if (!prefixs.has(module.name) || prefixs.get(module.name) !== updatePrefix) {
+            prefixs.set(module.name, updatePrefix);
         }
+    }
 
         const modulesWithWidths = visibleModules.map(module => ({
             ...module,
