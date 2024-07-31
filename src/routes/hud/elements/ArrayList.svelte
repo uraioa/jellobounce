@@ -7,27 +7,23 @@
     import {flip} from "svelte/animate";
     import {fly} from "svelte/transition";
     import {convertToSpacedString, spaceSeperatedNames} from "../../../theme/theme_config";
-    import {getPrefix} from "../../../theme/arraylist";
 
     let enabledModules: Module[] = [];
-    let prefixs = new Map();
 
     async function updateEnabledModules() {
         const modules = await getModules();
         const visibleModules = modules.filter(m => m.enabled && !m.hidden);
 
-        for (let module of visibleModules) {
-        const updatePrefix = await getPrefix(module.name);
-        
-        if (!prefixs.has(module.name) || prefixs.get(module.name) !== updatePrefix) {
-            prefixs.set(module.name, updatePrefix);
-        }
-    }
+        const modulesWithWidths = visibleModules.map(module => {
+                let formattedName = $spaceSeperatedNames ? convertToSpacedString(module.name) : module.name;
+                let fullName = module.tag == null ? formattedName : formattedName + " " + module.tag;
 
-        const modulesWithWidths = visibleModules.map(module => ({
-            ...module,
-            width: getTextWidth($spaceSeperatedNames ? (convertToSpacedString(module.name) + prefixs.get(module.name)) : (module.name + prefixs.get(module.name)), "400 15px sf-pro")
-        }));
+                return {
+                    ...module,
+                    width: getTextWidth(fullName, "500 14px Inter")
+                };
+            }
+        );
 
         modulesWithWidths.sort((a, b) => b.width - a.width);
 
@@ -53,9 +49,12 @@
 </script>
 
 <div class="arraylist">
-    {#each enabledModules as { name } (name)}
-        <div class="module" animate:flip={{ duration: 200 }} in:fly={{ x: 50, duration: 200 }} out:fly={{ x: 50, duration: 200 }}>
-            {$spaceSeperatedNames ? convertToSpacedString(name) : name} <h class="prefix">{prefixs.get(name)}</h> 
+    {#each enabledModules as {name, tag} (name)}
+        <div class="module" animate:flip={{duration: 200}} in:fly={{x: 50, duration: 200}} out:fly={{x: 50, duration: 200}}>
+            {$spaceSeperatedNames ? convertToSpacedString(name) : name}
+            {#if tag}
+                <span class="tag"> {tag}</span>
+            {/if}
         </div>
     {/each}
 </div>
@@ -66,7 +65,7 @@
     .arraylist {
         //position: fixed;
         //top: 0;
-        //right: 0;
+        //right: 0; 
     }
 
     .module {
@@ -82,7 +81,7 @@
     }
 
     .prefix {
-        color: #AAAAAA;
+        color: $arraylist-tag-color;
     }
 
     .module:first-child {
