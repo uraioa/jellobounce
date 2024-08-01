@@ -41,7 +41,7 @@
         ". a ."
         "b c d"
         "e e e";
-      grid-template-columns: repeat(3, 50px);
+      grid-template-columns: repeat(3, 40px);
       gap: 5px;
     }
 </style>

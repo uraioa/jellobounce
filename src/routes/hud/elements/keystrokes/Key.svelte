@@ -25,29 +25,27 @@
   @import "../../../../colors.scss";
 
   .key {
-    height: 50px;
+    height: 40px;
     background-color: rgba($background-color, $transparency);
     color: $text-color;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 12px;
-    font-size: 17px;
+    font-size: 14px;
     font-weight: 500;
     transition: ease scale 0.1s, ease background-color 0.2s;
     position: relative;
     text-align: center;
     font-family: "sf-pro";
-    box-shadow: 0px 0px 10px rgba($shadow-color, 0.5);
+    box-shadow: 0 0 10px rgba($shadow-color, 0.5);
     border: solid 1px $border-thing;
-    text-shadow: 0px 0px 10px rgba($shadow-color, 0.5);
+    text-shadow: 0 0 10px rgba($shadow-color, 0.5);
 
     &.active {
       background-color: rgba($accent-color, 0.7);
-      border-radius: 12px;
       scale: 95%;
       align-self: center;
-      font-size: 17px;
     }
   }
 </style>

@@ -74,11 +74,6 @@
             <div class="health-stats">
                 <div class="stat">
                     <div class="value">Health: {Math.floor(target.actualHealth + target.absorption)}</div>
-                    <img
-                            class="icon"
-                            src="img/hud/targethud/icon-health.svg"
-                            alt="health"
-                    />
                 </div>
             </div>
         </div>
@@ -98,7 +93,7 @@
         border-radius: 12px;
         overflow: hidden;
         height: 66px;
-        box-shadow: 0px 0px 10px rgba($shadow-color, 0.5);
+        box-shadow: 0 0 10px rgba($shadow-color, 0.5);
         border: solid 1px $border-thing;
         font-family: "sf-pro";
     }
@@ -120,7 +115,7 @@
         padding-top: 4px;
         font-size: 20px;
         padding-right: 5px;
-        text-shadow: 0px 0px 10px rgba($shadow-color, 0.5);
+        text-shadow: 0 0 10px rgba($shadow-color, 0.5);
     }
 
     .wl {
@@ -130,21 +125,21 @@
         bottom: 11px;
         padding-top: 9px;
         font-size: 16px;
-        text-shadow: 0px 0px 10px rgba($shadow-color, 0.5);
+        text-shadow: 0 0 10px rgba($shadow-color, 0.5);
 
         .winning {
             color: $targethud-winning;
-            filter: grayscale(70%);
+            filter: grayscale(50%);
         }
 
         .losing {
             color: $targethud-losing;
-            filter: grayscale(70%);
+            filter: grayscale(50%);
         }
 
         .draw {
             color: $targethud-draw;
-            filter: grayscale(70%);
+            filter: grayscale(50%);
         }
     }
 
@@ -154,7 +149,7 @@
         left: 64px;
         bottom: 11px;
         padding-top: 9px;
-        text-shadow: 0px 0px 10px rgba($shadow-color, 0.5);
+        text-shadow: 0 0 10px rgba($shadow-color, 0.5);
 
         .stat {
             .value {
@@ -181,7 +176,7 @@
         overflow: hidden;
         padding-left: 11px;
         padding-top: 11px;
-        box-shadow: 0px 0px 10px rgba($shadow-color, 0.5);
+        box-shadow: 0 0 10px rgba($shadow-color, 0.5);
 
         img {
             position: absolute;

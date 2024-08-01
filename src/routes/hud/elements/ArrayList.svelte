@@ -80,7 +80,7 @@
         box-shadow: -5px 0px 10px rgba(black, 0.27), 5px 0px 10px rgba(black, 0.27);
     }
 
-    .prefix {
+    .tag {
         color: $arraylist-tag-color;
     }
 

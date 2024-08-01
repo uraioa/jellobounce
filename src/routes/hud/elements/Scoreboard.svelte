@@ -43,7 +43,7 @@
     border-radius: 12px;
     overflow: hidden;
     font-size: 14px;
-    box-shadow: 0px 0px 10px rgba($shadow-color, 0.5);
+    box-shadow: 0 0 10px rgba($shadow-color, 0.5);
     border: solid 1px $border-thing;
     font-family: "sf-pro";
   }
