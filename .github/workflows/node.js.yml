@@ -31,12 +31,8 @@ jobs:
       with:
         args: zip -qq -r jellobounce.zip dist
     
-    - name: Create Release
-      uses: "0xDylan/action-auto-releases-n20@v1.1"
+    - name: Upload
+      uses: actions/upload-artifact@v3
       with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "latest"
-          prerelease: true
-          title: "Latest Build"
-          files: |
-            ./jellobounce.zip
+          name: jellobounce
+          path: ./jellobounce.zip
